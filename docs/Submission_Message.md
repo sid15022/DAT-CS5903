@@ -10,7 +10,7 @@
 | Repository | https://github.com/sid15022/DAT-CS5903 |
 | Stable submission | `cs5903-final-2026-gpu` · [dd51969ee5c8b6d78a137d29129f61f6a0790b07](https://github.com/sid15022/DAT-CS5903/tree/dd51969ee5c8b6d78a137d29129f61f6a0790b07) |
 | Evaluated GPU run | [e20f53712de648b8c03784d2b1c8496146fc2d16](https://github.com/sid15022/DAT-CS5903/commit/e20f53712de648b8c03784d2b1c8496146fc2d16) |
-| Demo | [Project recording, 10:25](Project_Demonstration.mp4) · [Recording script](Recording_Script.md) · [Executed SageMaker notebook](../DAT_CS5903_Final/DAT-CS5903/SageMaker_vLLM.ipynb) and [offline verification output](../evaluation/gpu_study_verification.txt) |
+| Demo | [Executed SageMaker notebook](../DAT_CS5903_Final/DAT-CS5903/SageMaker_vLLM.ipynb) and [offline verification output](../evaluation/gpu_study_verification.txt) |
 
 The four-GPU vLLM study included 12 held-out incidents. The detector ranked the affected component first in eight and abstained in four. Among the eight detected incidents, median time to the first correct ranking was 12.5 s, compared with 32.5 s for the matched-peer baseline. Over 16 monitored healthy minutes, the detector raised three false alarms and matched-peer raised none.
 
