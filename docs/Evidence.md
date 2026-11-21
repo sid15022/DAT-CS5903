@@ -32,7 +32,7 @@ The 40-trial study on four NVIDIA A10G GPUs included 12 injected incidents. The 
 |---|---|---|
 | 9 October 2026 | The simulator localized 8 of 12 incidents. The progress report proposed a SageMaker test of the same method. | [Progress report](Progress_Report_2026-10-09.docx) |
 | 16 October 2026 | The prototype implementation was archived. | [Prototype notebook](../Fail_Slow_LLM_Inference_Prototype.ipynb) |
-| 21 November 2026 | The native vLLM pilot verified KV reuse on four routes. The subsequent study recorded 40 GPU trials. | [Executed notebook](https://github.com/sid15022/DAT-CS5903/commit/60b014c451cdcbe01be30ca16df4eb5e2312e083) · [Study archive](https://github.com/sid15022/DAT-CS5903/commit/e20f53712de648b8c03784d2b1c8496146fc2d16) |
+| 21 November 2026 | The native vLLM pilot verified KV reuse on four routes. The subsequent study recorded 40 GPU trials. | [SageMaker_vLLM.ipynb](../DAT_CS5903_Final/DAT-CS5903/SageMaker_vLLM.ipynb) · [Study archive](https://github.com/sid15022/DAT-CS5903/commit/e20f53712de648b8c03784d2b1c8496146fc2d16) |
 
 Weekly logs and scored mentor feedback are unavailable. ADR-001 records the methodology decision retrospectively. [Architecture decisions](Architecture_Decision_Records.md)
 

@@ -8,6 +8,10 @@ In a four-GPU vLLM experiment, the detector ranked the affected component first 
 
 [Project report](docs/Project_Report.pdf) · [Final presentation](docs/Final_Project_Presentation.pptx) · [Experimental evaluation and results](docs/Experimental_Evaluation_and_Results.md) · [Mathematical methods and worked GPU example](docs/Mathematical_Methods.md) · [Architecture decisions](docs/Architecture_Decision_Records.md) · [Evidence and reproduction](docs/Evidence.md) · [Installation and runbook](DAT_CS5903_Final/DAT-CS5903/README.md)
 
+## Review the executed GPU study
+
+Open [SageMaker_vLLM.ipynb](DAT_CS5903_Final/DAT-CS5903/SageMaker_vLLM.ipynb) to inspect the saved SageMaker run without starting a GPU. Section 3 verifies KV-cache reuse on all four routes. Section 4 shows the 40 completed trials and compares the four diagnosis methods. Section 5 shows example generations, first-ranked components, detection delays and matched controls.
+
 ## Quick demonstration
 
 From a clean clone on Linux with Python 3.12:

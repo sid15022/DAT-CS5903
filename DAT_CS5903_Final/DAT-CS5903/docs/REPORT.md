@@ -25,4 +25,6 @@ Related documentation: [numerical results](../RESULTS.md), [architecture decisio
 
 ## Measured four-GPU SageMaker study
 
+The pilot and full study ran in [SageMaker_vLLM.ipynb](../SageMaker_vLLM.ipynb). Sections 3–5 contain the recorded outputs.
+
 Across 12 held-out GPU incidents, the conditioned detector and matched-peer baseline each ranked the affected component first eight times. Median time to the first correct ranking was 12.5 s for the conditioned detector and 32.5 s for matched-peer. Over 16 healthy minutes the methods raised three and zero false alarms, respectively. [Method comparison and raw data](../RESULTS.md#measured-four-gpu-sagemaker-study) · [Final project report](../../../docs/Project_Report.pdf)

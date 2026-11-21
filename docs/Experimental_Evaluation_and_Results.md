@@ -6,6 +6,8 @@ IIT Hyderabad · CS5903 · Project 25 · Group 5
 
 On four SageMaker GPUs serving Qwen, the work-conditioned detector ranked the injected component first in **8 of 12 incidents** and abstained in four. Historical latency matched its accuracy and median delay. Matched peer localized the same eight incidents, took 20 seconds longer at the median, and recorded zero false episodes during the observed healthy traffic. The conditioned detector recorded three. The results support localization of observable slowdowns under this workload. They also identify false alarms and incomplete telemetry as limits on deployment. [GPU incident records][incidents] · [GPU method summary][gsummary]
 
+Sections 3–5 of the executed [SageMaker_vLLM.ipynb](../DAT_CS5903_Final/DAT-CS5903/SageMaker_vLLM.ipynb) contain the pilot receipts, the four-method comparison and the per-incident results reported here. The saved outputs can be reviewed directly on GitHub.
+
 ## Experimental design
 
 | Experiment | Workload and controls | Question |

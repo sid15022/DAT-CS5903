@@ -78,7 +78,7 @@ Timing variation between short CPU runs is large. The second pair exceeds the 5%
 
 ## GPU evidence and reproducibility
 
-The GPU implementation launches native vLLM 0.10.2 OpenAI-compatible servers, with Qwen2.5-0.5B-Instruct and the V1 shared-storage connector on one host. The SageMaker archive records the pilot, complete run manifests, incident tables, service measurements and paired generations. GPU monitoring overhead remains unmeasured.
+The GPU implementation launches native vLLM 0.10.2 OpenAI-compatible servers, with Qwen2.5-0.5B-Instruct and the V1 shared-storage connector on one host. The executed [SageMaker_vLLM.ipynb](SageMaker_vLLM.ipynb) shows the pilot in section 3 and the full study and evaluation in sections 4–5. The study archive contains the underlying manifests, service measurements and paired generations. GPU monitoring overhead remains unmeasured.
 
 Two complete executions using the same simulation seeds reproduced the same values in all eight evaluation tables, including every component score and decision.
 
