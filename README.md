@@ -32,13 +32,13 @@ Open [SageMaker_vLLM.ipynb](DAT_CS5903_Final/DAT-CS5903/SageMaker_vLLM.ipynb) to
 
 ## Quick demonstration
 
-From a clean clone on Linux with Python 3.12:
+Start at the repository root on Linux with Python 3.12. The first two checks read archived outputs using the Python standard library. The remaining commands install the CPU environment and exercise the implementation:
 
 ```sh
 python evaluation/check_gpu_pilot.py
 python evaluation/check_gpu_study.py
 cd DAT_CS5903_Final/DAT-CS5903
-python -m venv .venv
+python3.12 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r locks/cpu-py312-linux.txt
 python -m unittest discover -s tests -v
@@ -49,8 +49,44 @@ python -m failslow pilot --backend numpy --workers 2 --out local-runs/demo-pilot
 
 The first command reads the recorded notebook and prints four rows with 128 loaded tokens and exact matches. The second verifies all 40 GPU trials, 2,821 matched generations and 784 live/offline decisions. [Recorded GPU verification](evaluation/gpu_study_verification.txt). The CPU commands should pass 11 tests, verify the frozen results, exercise a seeded 83-token prompt and produce matching split/unsplit token IDs on every pilot route. [Recorded checks](evaluation/verification.log).
 
-## Run, reproduce and operate
+## Architecture and example diagnosis
 
-The [pipeline walkthrough](DAT_CS5903_Final/DAT-CS5903/docs/PIPELINE.md) follows a request from prefill to KV copy and decode, through time-ordered scoring to incident evaluation. [Runbook](DAT_CS5903_Final/DAT-CS5903/README.md) covers pinned requirements, CLI commands and simulator regeneration. [Operations](DAT_CS5903_Final/DAT-CS5903/docs/HANDOVER.md) covers logs, termination and restart. [Safe environment example](DAT_CS5903_Final/DAT-CS5903/.env.example) sets worker count, results, selected engine, KV spool, model cache and container image. The experiment writes files. Seeded manifests replace database seeding, so database migration is inapplicable.
+A coordinator routes each prompt to a prefill worker. The worker produces the first token and exports its KV cache. The coordinator copies the cache files to the decode worker, which loads the cached prefix and streams the remaining tokens. Request IDs join model-forward timings, copy durations and client token receipts.
+
+The detector fits expected stage durations on healthy traffic, scales the excess durations and calibrates alert thresholds on separate healthy runs. Every 10 seconds it examines the preceding 30 seconds and ranks eligible workers and paths. Sparse traffic or missing measurements can produce an abstention. Fault labels enter during offline evaluation. [Request and diagnosis walkthrough](DAT_CS5903_Final/DAT-CS5903/docs/PIPELINE.md)
+
+For a reproducible input/output example, run `python evaluation/check_gpu_study.py` from the repository root. Its input is the committed 40-trial study. The conditioned-detector line should read:
+
+```text
+conditioned: 8/12 first correct, 4 abstentions, 3 false episodes in 16 min; median correct delay 12.5 s
+```
+
+## Dependencies and configuration
+
+The CPU demo and GPU serving runtime use separate environments. The Linux Python 3.12 [CPU lock](DAT_CS5903_Final/DAT-CS5903/locks/cpu-py312-linux.txt) pins NumPy 2.3.5 and scikit-learn 1.8.0. The [GPU lock](DAT_CS5903_Final/DAT-CS5903/locks/gpu-py312-linux.txt) pins vLLM 0.10.2 and Transformers 4.55.4. The GPU study uses Qwen2.5-0.5B-Instruct at revision `7ae557604adf67be50417f59c2c2f167def9a775`.
+
+For the Docker GPU launcher, install Docker and the NVIDIA Container Toolkit on Linux with a compatible driver. From `DAT_CS5903_Final/DAT-CS5903`, run `bash run_gpu.sh pilot` for one prefill and one decode worker on two GPUs. The launcher builds the image on first use. The following optional shell variables apply to this launcher. [Example shell configuration](DAT_CS5903_Final/DAT-CS5903/.env.example)
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `WORKERS` | `1` | Workers per stage. Set to 2 for four GPUs. |
+| `DAT_BACKEND` | `vllm-http` | Serving backend passed to the experiment. |
+| `DAT_RESULTS` | `./gpu-runs` | Host directory for outputs. |
+| `DAT_KV_SPOOL` | `$DAT_RESULTS/spool` | Writable host directory for KV transfers. |
+| `DAT_MODEL_CACHE` | `$HOME/.cache/huggingface` | Persistent model download cache. |
+| `DAT_IMAGE` | `dat-failslow:http-v0.10.2` | Docker image tag to build or reuse. |
+| `CUDA_VISIBLE_DEVICES` | Unset | Optional visible GPU selection. |
+
+## Data setup and reproducibility
+
+The experiment stores traces, manifests, fitted baselines and result tables in files. Database provisioning, schema migrations and database seeding are unnecessary. Archived checks read the committed fixtures directly. To generate fresh seeded simulator data after the CPU setup above, run the following from `DAT_CS5903_Final/DAT-CS5903`:
+
+```sh
+python -m failslow suite --backend sim --out local-runs/synthetic
+```
+
+## Limitations and open work
+
+The four-GPU study used one host, file-backed KV transfers, serialized requests per worker and controlled software delays. Its path measurements include filesystem effects. Physical NIC/RDMA faults, multi-host timing and continuous batching need separate experiments. Healthy monitoring covered 16 minutes, and the submitted run did not measure observer overhead. The 12.5-second median covers the eight detected incidents. [Experimental evaluation](docs/Experimental_Evaluation_and_Results.md) · [Operator handover](DAT_CS5903_Final/DAT-CS5903/docs/HANDOVER.md)
 
 [GPU study archive and verification](https://github.com/sid15022/DAT-CS5903/issues/1) · [False-alarm evaluation](https://github.com/sid15022/DAT-CS5903/issues/2) · [Monitoring overhead](https://github.com/sid15022/DAT-CS5903/issues/3)
