@@ -1,5 +1,7 @@
 # Passive Fail-Slow Diagnosis in Disaggregated LLM Inference
 
+**Final submission** · [cs5903-final-2026](https://github.com/sid15022/DAT-CS5903/releases/tag/cs5903-final-2026) · [e0d9ee69ab107454cc464f5a012282cf5b7890ae](https://github.com/sid15022/DAT-CS5903/commit/e0d9ee69ab107454cc464f5a012282cf5b7890ae)
+
 **Submission guide.** Start with the [step-by-step pipeline](docs/PIPELINE.md), [final report](../../docs/Project_Report.pdf), [architecture decisions](docs/DECISIONS.md), [operator and evaluator handover](docs/HANDOVER.md), and [open work](docs/OPEN_WORK.md). The four-GPU SageMaker study completed all 40 trials. [GPU comparison and measured outcomes](RESULTS.md#measured-four-gpu-sagemaker-study).
 
 **Five-minute demo.** Open the executed [SageMaker_vLLM.ipynb](SageMaker_vLLM.ipynb) and inspect sections 3–5. Section 3 records identical split and unsplit token IDs and 128 cached tokens on each route. Sections 4 and 5 contain the completed GPU study and incident results. Run `python evaluation/acceptance.py` from this directory for the frozen CPU and simulator checks.

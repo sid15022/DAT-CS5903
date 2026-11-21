@@ -1,6 +1,6 @@
 # Final implementation report
 
-Historical implementation tag: cs5903-final-2026. Tagged commit: 98c63b2c87757865c2300959c129461e3b186b95 (expanded in the submission ZIP). In a Git checkout, run git rev-parse 'cs5903-final-2026^{commit}' to obtain the same SHA.
+**Final submission** · [cs5903-final-2026](https://github.com/sid15022/DAT-CS5903/releases/tag/cs5903-final-2026) · [e0d9ee69ab107454cc464f5a012282cf5b7890ae](https://github.com/sid15022/DAT-CS5903/commit/e0d9ee69ab107454cc464f5a012282cf5b7890ae)
 
 ## Research question
 

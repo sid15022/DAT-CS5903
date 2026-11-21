@@ -1,5 +1,7 @@
 # Evaluator and operator handover
 
+**Final submission** · [cs5903-final-2026](https://github.com/sid15022/DAT-CS5903/releases/tag/cs5903-final-2026) · [e0d9ee69ab107454cc464f5a012282cf5b7890ae](https://github.com/sid15022/DAT-CS5903/commit/e0d9ee69ab107454cc464f5a012282cf5b7890ae)
+
 ## First demonstration
 
 From the repository root, run `python evaluation/check_gpu_study.py` to audit the recorded 40-trial GPU study without GPU access. Then change to `DAT_CS5903_Final/DAT-CS5903` and use Python 3.12 on Linux for the following commands. Create a virtual environment and install the CPU lock with `python -m pip install -r locks/cpu-py312-linux.txt`. Run `python evaluation/acceptance.py` for the frozen evidence and `python -m unittest discover -s tests -v` for executable checks. Expect PASS and 11 successful tests. Open Study_Results.ipynb for the worked results. Run the README simulator command to regenerate tables in a fresh directory. Seeds, split membership, thresholds and run lengths are in results/synthetic/study.json and calibration.json. The default study seed is 41201.

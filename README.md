@@ -1,5 +1,7 @@
 # Passive fail-slow diagnosis in disaggregated LLM inference
 
+**Final submission** · [cs5903-final-2026](https://github.com/sid15022/DAT-CS5903/releases/tag/cs5903-final-2026) · [e0d9ee69ab107454cc464f5a012282cf5b7890ae](https://github.com/sid15022/DAT-CS5903/commit/e0d9ee69ab107454cc464f5a012282cf5b7890ae)
+
 **CS5903 · Project 25 · Group 5 · Siddharth V H (CS24MTECH15022)**
 
 The detector estimates healthy service time from the work performed by each prefill worker, decode worker and key-value cache transfer path. It ranks components with persistent excess duration and abstains when observations are insufficient.

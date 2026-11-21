@@ -1,2 +1,6 @@
+Final GitHub submission: https://github.com/sid15022/DAT-CS5903/releases/tag/cs5903-final-2026
+Tagged commit: e0d9ee69ab107454cc464f5a012282cf5b7890ae
+
+The command below restores the older bundled implementation (98c63b2c87757865c2300959c129461e3b186b95). Its bundle-local tag shares the published tag name. Use a separate clone.
 The DAT-CS5903 directory contains the project source. Restore the historical implementation and its annotated tag with
 git clone -b cs5903-final-2026 DAT_CS5903_Final.bundle DAT-evaluator

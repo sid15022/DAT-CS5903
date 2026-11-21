@@ -40,12 +40,13 @@ For the demonstration, compare trial `test-0-decode-1` with its matched control.
 
 ## Release tag
 
-The [bundle](Submission_Tag.bundle) contains the annotated tag for the frozen implementation. From an authenticated clone, the following commands restore, publish and verify the tag. Its commit is `dd51969ee5c8b6d78a137d29129f61f6a0790b07`.
+[cs5903-final-2026](https://github.com/sid15022/DAT-CS5903/releases/tag/cs5903-final-2026) · [e0d9ee69ab107454cc464f5a012282cf5b7890ae](https://github.com/sid15022/DAT-CS5903/commit/e0d9ee69ab107454cc464f5a012282cf5b7890ae)
+
+Verify the published revision from a repository clone:
 
 ```sh
-git pull --ff-only origin main
-git fetch ./docs/Submission_Tag.bundle refs/tags/cs5903-final-2026-gpu:refs/tags/cs5903-final-2026-gpu
-git rev-parse 'cs5903-final-2026-gpu^{commit}'
-git push origin refs/tags/cs5903-final-2026-gpu
-git ls-remote origin 'refs/tags/cs5903-final-2026-gpu*'
+git fetch origin refs/tags/cs5903-final-2026
+git rev-parse 'FETCH_HEAD^{commit}'
 ```
+
+The [historical GPU implementation bundle](Submission_Tag.bundle) records the earlier frozen implementation.
