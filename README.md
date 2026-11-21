@@ -2,6 +2,8 @@
 
 **Final submission** · [cs5903-final-2026](https://github.com/sid15022/DAT-CS5903/releases/tag/cs5903-final-2026) · [e0d9ee69ab107454cc464f5a012282cf5b7890ae](https://github.com/sid15022/DAT-CS5903/commit/e0d9ee69ab107454cc464f5a012282cf5b7890ae)
 
+The next commit on `main` added the verified tag and SHA to the submission materials. See the [updated report](https://github.com/sid15022/DAT-CS5903/blob/6d2b7b80b000122e3a3f97457a586e4780d4c600/docs/Project_Report.pdf) and [documentation commit `6d2b7b80b000122e3a3f97457a586e4780d4c600`](https://github.com/sid15022/DAT-CS5903/commit/6d2b7b80b000122e3a3f97457a586e4780d4c600).
+
 **CS5903 · Project 25 · Group 5 · Siddharth V H (CS24MTECH15022)**
 
 The detector estimates healthy service time from the work performed by each prefill worker, decode worker and key-value cache transfer path. It ranks components with persistent excess duration and abstains when observations are insufficient.
