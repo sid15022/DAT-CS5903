@@ -1,5 +1,22 @@
 # Experiment results
 
+## Measured four-GPU SageMaker study
+
+On four NVIDIA A10Gs, the conditioned detector ranked the correct component first in 8 of 12 held-out GPU incidents. It abstained on the two sparse-worker and two hidden-transfer incidents. The median time to a correct top ranking was 12.5 s among detected incidents. Three false episodes in 16 monitored healthy minutes exceeded the provisional one-per-hour target. The one-hour schedule includes calibration and injected trials. The false-alarm denominator counts only the 16 no-fault evaluation trials after their 30-second warm-ups.
+
+| Method | Correct first / 12 | Abstentions | Wrong first | Median first correct¹ | False episodes / 16 min |
+|---|---:|---:|---:|---:|---:|
+| Conditioned | 8 | 4 | 0 | 12.5 s | 3 |
+| Historical | 8 | 4 | 0 | 12.5 s | 4 |
+| Work rate | 7 | 3 | 2 | 17.5 s | 2 |
+| Matched peer | 8 | 4 | 0 | 32.5 s | 0 |
+
+¹ Median among the eight incidents per method that eventually received a correct top ranking. The conditioned method identified both severities of prefill, decode and mixed faults after 12.5 s, and both visible transfer faults after 22.5 s. It matched historical latency on first-choice accuracy and median delay. With one repeat per case and severity the experiment establishes no general performance ordering.
+
+All 40 trial IDs have matching completion records. There were 10,209 offered, 10,208 accepted and 10,198 completed requests, with 10 right-censored after acceptance. Paired runs matched on all 2,821 common completed prompts and output token sequences. All 784 held-out live rankings and explanations match the recorded offline results. Only three stable SLO-alarming windows were eligible; one explanation was correct. GPU monitoring overhead requires a separate paired on/off study.
+
+[Run manifest](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/study.json) · [Per-incident results](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/incidents.csv) · [Healthy exposure](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/healthy_runs.csv) · [Method summary](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/summary.csv) · [Paired service impact](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/paired_impact.csv)
+
 ## Actual open-weight Qwen model on vLLM
 
 A single vLLM CPU engine served **240 study requests** using the published Qwen2.5-0.5B-Instruct checkpoint. The collector recorded **934 model forwards**. Weights matched the published SHA-256. Two additional prompts outside the study produced “The capital of France is Paris.” and “7 times 8 is 56.”
@@ -61,7 +78,7 @@ Timing variation between short CPU runs is large. The second pair exceeds the 5%
 
 ## GPU evidence and reproducibility
 
-The GPU implementation launches native vLLM 0.10.2 OpenAI-compatible servers, with Qwen2.5-0.5B-Instruct and the V1 shared-storage connector on one host. An NVIDIA device was unavailable in the implementation environment. GPU load verification, incident localization, physical throughput, latency and monitoring overhead are awaiting execution. The GPU pilot records direct token equivalence and worker-side KV-load evidence before starting an experiment.
+The GPU implementation launches native vLLM 0.10.2 OpenAI-compatible servers, with Qwen2.5-0.5B-Instruct and the V1 shared-storage connector on one host. The SageMaker archive records the pilot, complete run manifests, incident tables, service measurements and paired generations. GPU monitoring overhead remains unmeasured.
 
 Two complete executions using the same simulation seeds reproduced the same values in all eight evaluation tables, including every component score and decision.
 

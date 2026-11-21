@@ -62,7 +62,7 @@ Passive Fail Slow Diagnosis in Disaggregated LLM Inference · CS5903 · Siddhart
 
 **Consequences.** No database migration or account is needed. Interrupted studies can resume; copying a notebook alone can omit trace files. Serialized joblib baselines require a trusted source. Generated prompts are synthetic. External access, retention and redaction policy are prerequisites before adapting the collector to private workloads.
 
-**Evidence and validation.** [Schema and validation](../DAT_CS5903_Final/DAT-CS5903/failslow/data.py), [evaluation](../DAT_CS5903_Final/DAT-CS5903/failslow/evaluate.py), [archive gap and recovery criteria](https://github.com/sid15022/DAT-CS5903/issues/1).
+**Evidence and validation.** [Schema and validation](../DAT_CS5903_Final/DAT-CS5903/failslow/data.py), [evaluation](../DAT_CS5903_Final/DAT-CS5903/failslow/evaluate.py), [archive recovery and acceptance criteria](https://github.com/sid15022/DAT-CS5903/issues/1).
 
 **Revisit trigger.** Missing run artifacts after handover, incompatible schemas or untrusted serialized models. Introduce atomic export with a manifest and checksums, and evaluate a safer model interchange format before cross-tenant use.
 
@@ -81,3 +81,7 @@ Passive Fail Slow Diagnosis in Disaggregated LLM Inference · CS5903 · Siddhart
 **Evidence and validation.** [Trial design](../DAT_CS5903_Final/DAT-CS5903/failslow/study.py), [matched controls](../DAT_CS5903_Final/DAT-CS5903/results/synthetic/healthy_runs.csv), [real CPU trials](../DAT_CS5903_Final/DAT-CS5903/results/qwen-vllm-cpu/summary.csv).
 
 **Revisit trigger.** Too few eligible windows to calibrate or report a metric, or a wide exposure-based confidence interval spanning the proposed target. Collect additional independent runs before making a production claim.
+
+## Validation update following GPU archive publication
+
+On four NVIDIA A10Gs, the conditioned detector ranked the correct component first in 8 of 12 held-out GPU incidents. It abstained on the two sparse-worker and two hidden-transfer incidents. The median time to a correct top ranking was 12.5 s among detected incidents. Three false episodes in 16 monitored healthy minutes exceeded the provisional one-per-hour target. ADR-001 and ADR-005 retain their operating-point and support caveats. Paired controls yielded 2,821 matching generations. Live and offline logs agree on 784 rankings and explanations. [GPU evidence](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/summary.csv).

@@ -1,29 +1,21 @@
 # Final submission message
 
-**Subject:** CS5903 final project submission — Passive Fail Slow Diagnosis in Disaggregated LLM Inference
+**Subject** · CS5903 final project submission — Passive Fail Slow Diagnosis in Disaggregated LLM Inference
 
-Project ID: [enter official project ID]  
-Group number: [enter official group number]  
-Student: Siddharth V H (CS24MTECH15022)  
-Repository: https://github.com/sid15022/DAT-CS5903  
-Stable submission commit: a9b8036733f8dccf7720c6badc6f0c288ff09b47  
-Tag name: cs5903-final-2026-handover  
-Evaluated run commit: 60b014c451cdcbe01be30ca16df4eb5e2312e083  
-[Project report](Project_Report.pdf) · [Architecture decision records](Architecture_Decision_Records.md) · [Stable checkout](https://github.com/sid15022/DAT-CS5903/tree/a9b8036733f8dccf7720c6badc6f0c288ff09b47)  
-Demo: [executed SageMaker notebook](https://github.com/sid15022/DAT-CS5903/blob/60b014c451cdcbe01be30ca16df4eb5e2312e083/DAT_CS5903_Final/DAT-CS5903/SageMaker_vLLM.ipynb). A public inference endpoint is not required.
+| Course field | Submission |
+|---|---|
+| Project ID | [enter official project ID] |
+| Group number | [enter official group number] |
+| Student | Siddharth V H (CS24MTECH15022) |
+| Repository | https://github.com/sid15022/DAT-CS5903 |
+| Stable submission | `cs5903-final-2026-gpu` · use `git rev-parse HEAD` in this frozen checkout for its full commit ID |
+| Evaluated GPU run | [e20f53712de648b8c03784d2b1c8496146fc2d16](https://github.com/sid15022/DAT-CS5903/commit/e20f53712de648b8c03784d2b1c8496146fc2d16) |
+| Demo | [Executed SageMaker notebook](../DAT_CS5903_Final/DAT-CS5903/SageMaker_vLLM.ipynb) and [offline verification output](../evaluation/gpu_study_verification.txt) |
 
-The GPU pilot verifies four prefill/decode routes with matching output tokens. GPU diagnostic accuracy from the full 40-trial study awaits the Studio artifact export. The report gives separate simulator and measured CPU comparisons.
+The study ran Qwen2.5-0.5B-Instruct on vLLM across four NVIDIA A10G GPUs for 40 trials. The conditioned detector ranked the affected component first in 8 of 12 incidents, abstained in four and made zero wrong first accusations. Its median time to a first correct ranking was 12.5 seconds among detected incidents. Matched-peer also scored 8/12, with a 32.5-second median. During 16 monitored healthy minutes the conditioned method raised three false episodes and matched-peer raised none. GPU monitoring overhead remains unmeasured.
 
-## Owner checklist before sending
+[Final report](Project_Report.pdf) · [Architecture decision records](Architecture_Decision_Records.md) · [Evidence, reproduction commands and limitations](Evidence.md)
 
-Fill in the two course allocation fields above and confirm the member list. The annotated tag is preserved in [Submission_Tag.bundle](Submission_Tag.bundle). From an authenticated full clone on the current main branch, publish it with:
+## Before sending
 
-```sh
-git fetch origin main
-git fetch ./docs/Submission_Tag.bundle refs/tags/cs5903-final-2026-handover:refs/tags/cs5903-final-2026-handover
-git rev-parse 'cs5903-final-2026-handover^{commit}'
-git push origin refs/tags/cs5903-final-2026-handover
-git ls-remote --tags origin 'cs5903-final-2026-handover*'
-```
-
-The peeled tag must resolve to the stable submission commit above. The previously distributed October-prototype-derived package carried a separate historical tag. Confirm evaluator access to the stable checkout before sending. This text is prepared for the student; it has not been sent to course staff.
+Fill in the two course allocation fields and confirm the member list. An evaluator can verify the archived four-GPU study from the repository root with `python evaluation/check_gpu_study.py`.

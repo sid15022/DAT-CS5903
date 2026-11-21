@@ -1,6 +1,6 @@
 # Passive Fail-Slow Diagnosis in Disaggregated LLM Inference
 
-**Submission guide.** Start with the [step-by-step pipeline](docs/PIPELINE.md), [final report](docs/REPORT.md), [architecture decisions](docs/DECISIONS.md), [operator and evaluator handover](docs/HANDOVER.md), and [open work](docs/OPEN_WORK.md). The simulation and Qwen CPU results are measured. Native multi-GPU acceptance awaits SageMaker execution.
+**Submission guide.** Start with the [step-by-step pipeline](docs/PIPELINE.md), [final report](docs/REPORT.md), [architecture decisions](docs/DECISIONS.md), [operator and evaluator handover](docs/HANDOVER.md), and [open work](docs/OPEN_WORK.md). The four-GPU SageMaker study completed all 40 trials. [GPU comparison and measured outcomes](RESULTS.md#measured-four-gpu-sagemaker-study).
 
 **Five-minute demo.** From the project root run `python evaluation/acceptance.py`, then open Study_Results.ipynb. The frozen evaluator uses only the Python standard library. For a hardware demonstration open SageMaker_vLLM.ipynb and set PILOT_ONLY to True. The 129-token pilot prompt should yield the same eight generated token IDs on the split and unsplit paths and a receipt for 128 loaded tokens. Generated text and exact timings are recorded by the run.
 

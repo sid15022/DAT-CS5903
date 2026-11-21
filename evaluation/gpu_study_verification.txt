@@ -1,0 +1,10 @@
+conditioned: 8/12 first correct, 4 abstentions, 3 false episodes in 16 min; median correct delay 12.5 s
+historical: 8/12 first correct, 4 abstentions, 4 false episodes in 16 min; median correct delay 12.5 s
+work_rate: 7/12 first correct, 3 abstentions, 2 false episodes in 16 min; median correct delay 17.5 s
+matched_peer: 8/12 first correct, 4 abstentions, 0 false episodes in 16 min; median correct delay 32.5 s
+Verified 40 trials, 2821 matched generations and 784 live/offline rankings and explanations.
+offered 10209
+accepted 10208
+n_completed_requests 10198
+n_right_censored_requests 10
+verified_loads 10204

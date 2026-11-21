@@ -2,7 +2,7 @@
 
 ## First demonstration
 
-From the repository root use Python 3.12 on Linux. Create a virtual environment and install the CPU lock with `python -m pip install -r locks/cpu-py312-linux.txt`. Run `python evaluation/acceptance.py` for the frozen evidence and `python -m unittest discover -s tests -v` for executable checks. Expect PASS and 11 successful tests. Open Study_Results.ipynb for the worked results. Run the README simulator command to regenerate tables in a fresh directory. Seeds, split membership, thresholds and run lengths are in results/synthetic/study.json and calibration.json. The default study seed is 41201.
+From the repository root, run `python evaluation/check_gpu_study.py` to audit the recorded 40-trial GPU study without GPU access. Then change to `DAT_CS5903_Final/DAT-CS5903` and use Python 3.12 on Linux for the following commands. Create a virtual environment and install the CPU lock with `python -m pip install -r locks/cpu-py312-linux.txt`. Run `python evaluation/acceptance.py` for the frozen evidence and `python -m unittest discover -s tests -v` for executable checks. Expect PASS and 11 successful tests. Open Study_Results.ipynb for the worked results. Run the README simulator command to regenerate tables in a fresh directory. Seeds, split membership, thresholds and run lengths are in results/synthetic/study.json and calibration.json. The default study seed is 41201.
 
 ## What the tests cover
 
@@ -20,4 +20,4 @@ Use a fresh output directory to reset. Reusing an existing directory with identi
 * Weight or image download failure: check registry and Hugging Face connectivity, free disk, and the model cache mount. The model is public. Docker needs NVIDIA runtime access. Studio needs an AWS account with GPU instance quota, appropriate region capacity and space permissions. Managed jobs also need ECR pull, execution-role and S3 write access.
 * Handoff mismatch: inspect the failing route, connector version, prefix-cache settings, spool mount and worker log. Retain both token sequences and the loaded-token receipt. A failed pilot invalidates the hardware experiment.
 * Empty rankings: check offered traffic, per-component support, thresholds and missing observations in component_scores.csv.gz. Compare paired controls. An abstention is an evaluated outcome.
-* Budget: the four-GPU notebook default schedules 80 minutes of traffic plus setup and analysis. The full three-repetition four-worker CLI study schedules 4.8 hours plus overhead. GPU time, storage and managed output costs depend on region and account. A pilot-only run is available.
+* Budget: the four-GPU notebook default schedules 60 minutes of traffic (40 trials × 90 seconds) plus setup and analysis. The full three-repetition four-worker CLI study schedules 4.8 hours plus overhead. GPU time, storage and managed output costs depend on region and account. A pilot-only run is available.
