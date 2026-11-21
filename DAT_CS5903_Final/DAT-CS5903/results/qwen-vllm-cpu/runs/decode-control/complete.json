@@ -1,0 +1,11 @@
+{
+  "run_id": "decode-control",
+  "duration_s": 28.877246013999866,
+  "requests": 32,
+  "forward_records": 129,
+  "applied_delay_steps": 0,
+  "target": null,
+  "onset_s": 7.827848621999692,
+  "end_s": 21.657782503999897,
+  "seed": 1019
+}

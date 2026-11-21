@@ -1,0 +1,16 @@
+{
+  "run_id": "test-h0-2",
+  "config_id": "95e228540c9556a62173",
+  "duration_s": 4.0,
+  "n_completed_requests": 254,
+  "n_right_censored_requests": 1,
+  "offered": 255,
+  "accepted": 255,
+  "verified_loads": 254,
+  "applied_stage_operations": 0,
+  "trace_bytes": 1211166,
+  "collector_cpu_s": 0.7478439999999993,
+  "coordinator_peak_rss_kib": 141400,
+  "synthetic_only": false,
+  "backend": "numpy"
+}

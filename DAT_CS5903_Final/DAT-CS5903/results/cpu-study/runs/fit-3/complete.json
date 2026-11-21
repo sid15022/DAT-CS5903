@@ -1,0 +1,16 @@
+{
+  "run_id": "fit-3",
+  "config_id": "95e228540c9556a62173",
+  "duration_s": 4.0,
+  "n_completed_requests": 170,
+  "n_right_censored_requests": 0,
+  "offered": 170,
+  "accepted": 170,
+  "verified_loads": 170,
+  "applied_stage_operations": 0,
+  "trace_bytes": 1183776,
+  "collector_cpu_s": 0.6164680000000002,
+  "coordinator_peak_rss_kib": 133592,
+  "synthetic_only": false,
+  "backend": "numpy"
+}

@@ -1,0 +1,180 @@
+{
+  "config_id": "95e228540c9556a62173",
+  "profile": {
+    "host": "741bfab5b9ed",
+    "workers": {
+      "p1": {
+        "engine": "numpy-causal-attention",
+        "numpy": "2.3.5",
+        "weights_seed": 717,
+        "vocab": 257,
+        "device": "cpu",
+        "transfer": "npz-copy",
+        "batch_size": 1
+      },
+      "p2": {
+        "engine": "numpy-causal-attention",
+        "numpy": "2.3.5",
+        "weights_seed": 717,
+        "vocab": 257,
+        "device": "cpu",
+        "transfer": "npz-copy",
+        "batch_size": 1
+      },
+      "d1": {
+        "engine": "numpy-causal-attention",
+        "numpy": "2.3.5",
+        "weights_seed": 717,
+        "vocab": 257,
+        "device": "cpu",
+        "transfer": "npz-copy",
+        "batch_size": 1
+      },
+      "d2": {
+        "engine": "numpy-causal-attention",
+        "numpy": "2.3.5",
+        "weights_seed": 717,
+        "vocab": 257,
+        "device": "cpu",
+        "transfer": "npz-copy",
+        "batch_size": 1
+      }
+    },
+    "topology": {
+      "prefill": [
+        "p1",
+        "p2"
+      ],
+      "transfer": [
+        "l11",
+        "l12",
+        "l21",
+        "l22"
+      ],
+      "decode": [
+        "d1",
+        "d2"
+      ]
+    },
+    "clock": "single-host CLOCK_MONOTONIC",
+    "stage_semantics": "file-kv-handoff-v1"
+  },
+  "paths": [
+    {
+      "prefill": "p1",
+      "decode": "d1",
+      "bytes": 33514,
+      "copy_ms": 0.49869899999066547,
+      "prompt_tokens": 129,
+      "loaded_tokens": 129,
+      "reference_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "split_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "exact_match": true
+    },
+    {
+      "prefill": "p1",
+      "decode": "d2",
+      "bytes": 33514,
+      "copy_ms": 0.28277199999138247,
+      "prompt_tokens": 129,
+      "loaded_tokens": 129,
+      "reference_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "split_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "exact_match": true
+    },
+    {
+      "prefill": "p2",
+      "decode": "d1",
+      "bytes": 33514,
+      "copy_ms": 0.2544789999774366,
+      "prompt_tokens": 129,
+      "loaded_tokens": 129,
+      "reference_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "split_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "exact_match": true
+    },
+    {
+      "prefill": "p2",
+      "decode": "d2",
+      "bytes": 33514,
+      "copy_ms": 0.2097949998187687,
+      "prompt_tokens": 129,
+      "loaded_tokens": 129,
+      "reference_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "split_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "exact_match": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "run_id": "test-2-prefill-0",
+  "seed": 46401,
+  "duration_s": 180.0,
+  "regime": "normal",
+  "workload_shift_s": null,
+  "fault_component": "p1",
+  "fault_start_s": 75.0,
+  "fault_end_s": 145.0,
+  "slowdown": 1.5,
+  "sparse": false,
+  "missing_transfer": false,
+  "n_arrivals": 460,
+  "n_completed_requests": 459,
+  "n_right_censored_requests": 1,
+  "synthetic_only": true
+}

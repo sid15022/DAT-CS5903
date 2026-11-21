@@ -1,0 +1,16 @@
+{
+  "run_id": "test-0-missing_path-0",
+  "config_id": "95e228540c9556a62173",
+  "duration_s": 4.0,
+  "n_completed_requests": 145,
+  "n_right_censored_requests": 0,
+  "offered": 146,
+  "accepted": 145,
+  "verified_loads": 145,
+  "applied_stage_operations": 11,
+  "trace_bytes": 648995,
+  "collector_cpu_s": 0.49018299999999915,
+  "coordinator_peak_rss_kib": 142292,
+  "synthetic_only": false,
+  "backend": "numpy"
+}

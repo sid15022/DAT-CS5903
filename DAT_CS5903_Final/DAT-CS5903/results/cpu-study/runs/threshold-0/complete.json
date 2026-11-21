@@ -1,0 +1,16 @@
+{
+  "run_id": "threshold-0",
+  "config_id": "95e228540c9556a62173",
+  "duration_s": 4.0,
+  "n_completed_requests": 159,
+  "n_right_censored_requests": 0,
+  "offered": 159,
+  "accepted": 159,
+  "verified_loads": 159,
+  "applied_stage_operations": 0,
+  "trace_bytes": 753876,
+  "collector_cpu_s": 0.45590700000000073,
+  "coordinator_peak_rss_kib": 136664,
+  "synthetic_only": false,
+  "backend": "numpy"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "test-0-decode-0-control",
+  "config_id": "95e228540c9556a62173",
+  "duration_s": 4.0,
+  "n_completed_requests": 166,
+  "n_right_censored_requests": 1,
+  "offered": 167,
+  "accepted": 167,
+  "verified_loads": 167,
+  "applied_stage_operations": 0,
+  "trace_bytes": 829426,
+  "collector_cpu_s": 0.6054179999999985,
+  "coordinator_peak_rss_kib": 141400,
+  "synthetic_only": false,
+  "backend": "numpy"
+}

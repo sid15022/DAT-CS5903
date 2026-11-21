@@ -1,0 +1,16 @@
+{
+  "run_id": "test-0-mixed-1",
+  "config_id": "95e228540c9556a62173",
+  "duration_s": 4.0,
+  "n_completed_requests": 169,
+  "n_right_censored_requests": 0,
+  "offered": 169,
+  "accepted": 169,
+  "verified_loads": 169,
+  "applied_stage_operations": 187,
+  "trace_bytes": 798829,
+  "collector_cpu_s": 0.6040620000000008,
+  "coordinator_peak_rss_kib": 142164,
+  "synthetic_only": false,
+  "backend": "numpy"
+}

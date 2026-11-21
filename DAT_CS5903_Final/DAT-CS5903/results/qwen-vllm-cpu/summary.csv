@@ -1,0 +1,5 @@
+run_id,target,first_ranking,ranking_before_onset,first_correct_delay_s,false_episodes,requests
+prefill-control,,"[""d1""]",[],,1.0,32
+prefill-fault,p1,"[""p1""]","[""p1""]",2.6386688569996295,,32
+decode-fault,d1,"[""p1""]",[],2.1368185500000436,,32
+decode-control,,"[""d1""]","[""d1""]",,1.0,32

@@ -1,0 +1,17 @@
+{
+  "run_id": "test-h1-0",
+  "seed": 42301,
+  "duration_s": 180.0,
+  "regime": "normal",
+  "workload_shift_s": null,
+  "fault_component": null,
+  "fault_start_s": 75.0,
+  "fault_end_s": 145.0,
+  "slowdown": 1.0,
+  "sparse": false,
+  "missing_transfer": false,
+  "n_arrivals": 450,
+  "n_completed_requests": 450,
+  "n_right_censored_requests": 0,
+  "synthetic_only": true
+}

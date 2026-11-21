@@ -1,0 +1,32 @@
+[
+  {
+    "prompt": "What is the capital of France? Answer in one short sentence.",
+    "output": "The capital of France is Paris.",
+    "token_ids": [
+      785,
+      6722,
+      315,
+      9625,
+      374,
+      12095,
+      13,
+      151645
+    ]
+  },
+  {
+    "prompt": "What is 7 times 8? Answer with the number.",
+    "output": "7 times 8 is 56.",
+    "token_ids": [
+      22,
+      3039,
+      220,
+      23,
+      374,
+      220,
+      20,
+      21,
+      13,
+      151645
+    ]
+  }
+]

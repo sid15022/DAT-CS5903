@@ -1,0 +1,11 @@
+{
+  "run_id": "decode-fault",
+  "duration_s": 40.36042089700004,
+  "requests": 32,
+  "forward_records": 129,
+  "applied_delay_steps": 49,
+  "target": "d1",
+  "onset_s": 7.863181449999956,
+  "end_s": 32.631309066000085,
+  "seed": 1019
+}

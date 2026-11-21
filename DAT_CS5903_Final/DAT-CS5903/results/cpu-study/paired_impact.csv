@@ -1,0 +1,13 @@
+run_id,control,target,strength,ttft_p99_ms_delta,itl_p99_ms_delta,completed_rps_delta,ttft_violation_fraction_delta,itl_violation_fraction_delta
+test-0-prefill-0,test-0-prefill-0-control,p1,1.5,7.09908159761545,0.32195179000268137,0.0,0.0,0.0
+test-0-prefill-1,test-0-prefill-1-control,p1,3.0,5.370365226263608,0.8598213198820135,0.0,0.0,0.0
+test-0-decode-0,test-0-decode-0-control,d1,1.5,-4.8083434294839975,-2.563600099986166,0.25,0.0,0.0
+test-0-decode-1,test-0-decode-1-control,d1,3.0,-2.8504610834914983,3.0069962500328944,0.0,0.0,0.0
+test-0-transfer-0,test-0-transfer-0-control,l11,1.5,0.9365796128205455,-0.2881848799711415,0.0,0.0,0.0
+test-0-transfer-1,test-0-transfer-1-control,l11,3.0,-1.746934131775638,-0.38785500009907725,0.0,0.0,0.0
+test-0-mixed-0,test-0-mixed-0-control,d1,1.5,1.500734115499995,0.9728131999509122,0.0,0.0,0.0
+test-0-mixed-1,test-0-mixed-1-control,d1,3.0,2.0084295989073153,3.1287225000824055,0.0,0.0,0.0
+test-0-missing_path-0,test-0-missing_path-0-control,l11,1.5,0.23759515718060253,1.3288367398445073,0.0,0.0,0.0
+test-0-missing_path-1,test-0-missing_path-1-control,l11,3.0,-0.7691700145336986,0.907902940070926,0.0,0.0,0.0
+test-0-sparse_worker-0,test-0-sparse_worker-0-control,p2,1.5,-6.396925071914044,0.13919850005095213,0.0,0.0,0.0
+test-0-sparse_worker-1,test-0-sparse_worker-1-control,p2,3.0,-2.8084406212350643,1.050790000078905,0.0,0.0,0.0

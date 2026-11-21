@@ -1,0 +1,16 @@
+{
+  "run_id": "test-0-transfer-1-control",
+  "config_id": "95e228540c9556a62173",
+  "duration_s": 4.0,
+  "n_completed_requests": 147,
+  "n_right_censored_requests": 0,
+  "offered": 147,
+  "accepted": 147,
+  "verified_loads": 147,
+  "applied_stage_operations": 0,
+  "trace_bytes": 697654,
+  "collector_cpu_s": 0.41636599999999735,
+  "coordinator_peak_rss_kib": 141524,
+  "synthetic_only": false,
+  "backend": "numpy"
+}

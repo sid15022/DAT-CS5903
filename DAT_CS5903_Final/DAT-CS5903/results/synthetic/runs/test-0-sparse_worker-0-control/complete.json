@@ -1,0 +1,17 @@
+{
+  "run_id": "test-0-sparse_worker-0-control",
+  "seed": 46211,
+  "duration_s": 180.0,
+  "regime": "normal",
+  "workload_shift_s": null,
+  "fault_component": null,
+  "fault_start_s": 75.0,
+  "fault_end_s": 145.0,
+  "slowdown": 1.0,
+  "sparse": true,
+  "missing_transfer": false,
+  "n_arrivals": 482,
+  "n_completed_requests": 482,
+  "n_right_censored_requests": 0,
+  "synthetic_only": true
+}

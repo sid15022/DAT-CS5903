@@ -1,0 +1,6 @@
+FROM vllm/vllm-openai:v0.10.2
+RUN python3 -m pip install --no-cache-dir "scikit-learn==1.7.2" "pandas==2.2.3" "joblib==1.5.2"
+ENV PYTHONUNBUFFERED=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+WORKDIR /opt/dat
+COPY failslow/ failslow/
+ENTRYPOINT ["python3", "-m", "failslow"]

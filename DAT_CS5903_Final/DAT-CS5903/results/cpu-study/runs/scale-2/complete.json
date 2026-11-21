@@ -1,0 +1,16 @@
+{
+  "run_id": "scale-2",
+  "config_id": "95e228540c9556a62173",
+  "duration_s": 4.0,
+  "n_completed_requests": 341,
+  "n_right_censored_requests": 0,
+  "offered": 341,
+  "accepted": 341,
+  "verified_loads": 341,
+  "applied_stage_operations": 0,
+  "trace_bytes": 1595253,
+  "collector_cpu_s": 1.150462,
+  "coordinator_peak_rss_kib": 135512,
+  "synthetic_only": false,
+  "backend": "numpy"
+}

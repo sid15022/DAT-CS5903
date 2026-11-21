@@ -1,0 +1,387 @@
+[
+  {
+    "request_id": "r0000",
+    "prompt_tokens": 81,
+    "prompt_sha256": "b7135498a208449053ae578db174c8109ba50d82a87cee5f6a0fd05c632f4d32",
+    "output_ids": [
+      28715,
+      389,
+      279
+    ],
+    "output_text": "Based on the"
+  },
+  {
+    "request_id": "r0001",
+    "prompt_tokens": 65,
+    "prompt_sha256": "487376f2868eaeb5a25e6881f105c14b370c3e486a6c5f3f4961593e10c394e4",
+    "output_ids": [
+      785,
+      11618,
+      8090,
+      374
+    ],
+    "output_text": "The journey duration is"
+  },
+  {
+    "request_id": "r0002",
+    "prompt_tokens": 81,
+    "prompt_sha256": "a2adee07a9614cc763f009190b4f68deba22828879691238b090e0b8b598ad12",
+    "output_ids": [
+      1249,
+      8253,
+      1246,
+      1657
+    ],
+    "output_text": "To determine how many"
+  },
+  {
+    "request_id": "r0003",
+    "prompt_tokens": 81,
+    "prompt_sha256": "cee7006ff7e8e0b882b73ff8ea160245a2cb1a1f1c3fb76f5caddda6ab5ff485",
+    "output_ids": [
+      785,
+      9282,
+      5269,
+      5711,
+      264
+    ],
+    "output_text": "The observatory uses a"
+  },
+  {
+    "request_id": "r0004",
+    "prompt_tokens": 81,
+    "prompt_sha256": "0880b7f22b185b231a1e46448819ae56f140750f3575ee1b3517c2643e33dffb",
+    "output_ids": [
+      28715,
+      389,
+      279
+    ],
+    "output_text": "Based on the"
+  },
+  {
+    "request_id": "r0005",
+    "prompt_tokens": 65,
+    "prompt_sha256": "48aeea37c416f2a2bb70a8317ab25a1cc04bf1edd1d533b96c64f945477ddf25",
+    "output_ids": [
+      785,
+      11618,
+      8090,
+      374,
+      220
+    ],
+    "output_text": "The journey duration is "
+  },
+  {
+    "request_id": "r0006",
+    "prompt_tokens": 97,
+    "prompt_sha256": "b36967a8748e47b224a97db2b2f96f42b240278dd00cb78d1874304db438e108",
+    "output_ids": [
+      1249,
+      8253,
+      1246
+    ],
+    "output_text": "To determine how"
+  },
+  {
+    "request_id": "r0007",
+    "prompt_tokens": 97,
+    "prompt_sha256": "ed95a937a6e3c42e15651195d8d98349241ac589a51e37cffe3d6e4f2a187704",
+    "output_ids": [
+      785,
+      9282,
+      5269
+    ],
+    "output_text": "The observatory"
+  },
+  {
+    "request_id": "r0008",
+    "prompt_tokens": 65,
+    "prompt_sha256": "99f23d37814bb2ee2e467800d27770d1ab51cd124a9fd1e81253e172b944232d",
+    "output_ids": [
+      28715,
+      389,
+      279,
+      4008
+    ],
+    "output_text": "Based on the description"
+  },
+  {
+    "request_id": "r0009",
+    "prompt_tokens": 97,
+    "prompt_sha256": "3f05b1b5f0ed4ddc94e30d380dc2e9d5bc07a5a5988868a3b0930806a5c9a480",
+    "output_ids": [
+      1249,
+      8253,
+      279,
+      2790
+    ],
+    "output_text": "To determine the total"
+  },
+  {
+    "request_id": "r0010",
+    "prompt_tokens": 97,
+    "prompt_sha256": "f2980ff119ba9e039b38416cfdf042bac2134a2330a2befccc801a7a4a4d1bf0",
+    "output_ids": [
+      1249,
+      8253,
+      1246,
+      1657,
+      27373
+    ],
+    "output_text": "To determine how many rolls"
+  },
+  {
+    "request_id": "r0011",
+    "prompt_tokens": 81,
+    "prompt_sha256": "822c1f192d8d27141975ccfbf5708d854822cad92946dc1538aa83a2a5f9930c",
+    "output_ids": [
+      785,
+      9282,
+      5269,
+      5711
+    ],
+    "output_text": "The observatory uses"
+  },
+  {
+    "request_id": "r0012",
+    "prompt_tokens": 65,
+    "prompt_sha256": "3e0cd1a9c50678b129ae36b5e6658c545984788df76aaffc79cb7a9671a79a5d",
+    "output_ids": [
+      28715,
+      389,
+      279
+    ],
+    "output_text": "Based on the"
+  },
+  {
+    "request_id": "r0013",
+    "prompt_tokens": 81,
+    "prompt_sha256": "542e6fcc091af082e199dfc164981d005d671104fc086e9e8f8cc1c524a1325f",
+    "output_ids": [
+      1249,
+      8253,
+      279
+    ],
+    "output_text": "To determine the"
+  },
+  {
+    "request_id": "r0014",
+    "prompt_tokens": 97,
+    "prompt_sha256": "7b4d7a7621d9db54033686e88a5d73f0fa121490e9ec449e05e4e1a283caeab7",
+    "output_ids": [
+      1249,
+      8253,
+      1246,
+      1657,
+      27373
+    ],
+    "output_text": "To determine how many rolls"
+  },
+  {
+    "request_id": "r0015",
+    "prompt_tokens": 65,
+    "prompt_sha256": "4faec72249bd2046c61ccaa1f3251099d06f693c53657c09860f748c465ecec6",
+    "output_ids": [
+      785,
+      9282,
+      5269
+    ],
+    "output_text": "The observatory"
+  },
+  {
+    "request_id": "r0016",
+    "prompt_tokens": 65,
+    "prompt_sha256": "38481f890e6691c419694baa68bab7fb8242cf53e2197a849462ee56d9469b4e",
+    "output_ids": [
+      28715,
+      389,
+      279,
+      4008
+    ],
+    "output_text": "Based on the description"
+  },
+  {
+    "request_id": "r0017",
+    "prompt_tokens": 65,
+    "prompt_sha256": "65e29c16d6be175e931deeced14c6be2966e6fb4ebace5b3c65b5aed548061c0",
+    "output_ids": [
+      1249,
+      8253,
+      279
+    ],
+    "output_text": "To determine the"
+  },
+  {
+    "request_id": "r0018",
+    "prompt_tokens": 81,
+    "prompt_sha256": "77eecf4cb93c6258a56302bc5ab10669b920d3ffc63f65cd10592c0b8dffa439",
+    "output_ids": [
+      1249,
+      8253,
+      1246,
+      1657,
+      27373
+    ],
+    "output_text": "To determine how many rolls"
+  },
+  {
+    "request_id": "r0019",
+    "prompt_tokens": 81,
+    "prompt_sha256": "5530e75994e473e0fe42c718de39ba9f07815cb2e3a903016a6aa9211a9bcbbd",
+    "output_ids": [
+      785,
+      9282,
+      5269,
+      5711,
+      264
+    ],
+    "output_text": "The observatory uses a"
+  },
+  {
+    "request_id": "r0020",
+    "prompt_tokens": 97,
+    "prompt_sha256": "a3ab986f933118e6cbddd296c25979d48b9073fa9f3d7c39b5451575c1e17a1b",
+    "output_ids": [
+      28715,
+      389,
+      279,
+      4008,
+      3897
+    ],
+    "output_text": "Based on the description provided"
+  },
+  {
+    "request_id": "r0021",
+    "prompt_tokens": 97,
+    "prompt_sha256": "6571a4f1e7a3426c7ffa246b4416557f5cb550e85ac12cb8f79835797a036687",
+    "output_ids": [
+      1249,
+      8253,
+      279,
+      2790,
+      11618
+    ],
+    "output_text": "To determine the total journey"
+  },
+  {
+    "request_id": "r0022",
+    "prompt_tokens": 97,
+    "prompt_sha256": "f5a74e75f0887e030423bf535dd639ee387188a7465a5800228fabe666cc6ab5",
+    "output_ids": [
+      1249,
+      8253,
+      1246
+    ],
+    "output_text": "To determine how"
+  },
+  {
+    "request_id": "r0023",
+    "prompt_tokens": 81,
+    "prompt_sha256": "0f863e95e607a9a1f4223c1605ce9bc29f647b014acb63b78497d96c48fb42d4",
+    "output_ids": [
+      785,
+      9282,
+      5269,
+      5711
+    ],
+    "output_text": "The observatory uses"
+  },
+  {
+    "request_id": "r0024",
+    "prompt_tokens": 65,
+    "prompt_sha256": "fcf289250170b5627cc4e6b5af55d58b1149c9546f52eab6034eeb5decc39821",
+    "output_ids": [
+      28715,
+      389,
+      279,
+      4008,
+      3897
+    ],
+    "output_text": "Based on the description provided"
+  },
+  {
+    "request_id": "r0025",
+    "prompt_tokens": 97,
+    "prompt_sha256": "f7d447faa41da4d15c944bed8552c2c6dc10f7c36e916df0ae7f35182787f641",
+    "output_ids": [
+      1249,
+      8253,
+      279,
+      2790,
+      11618
+    ],
+    "output_text": "To determine the total journey"
+  },
+  {
+    "request_id": "r0026",
+    "prompt_tokens": 81,
+    "prompt_sha256": "f37b26f4e8ee7dfadc1785c316ebcd95e4a659c5fb5f06b64fef66feb705997c",
+    "output_ids": [
+      1249,
+      8253,
+      1246,
+      1657,
+      27373
+    ],
+    "output_text": "To determine how many rolls"
+  },
+  {
+    "request_id": "r0027",
+    "prompt_tokens": 81,
+    "prompt_sha256": "4bdd015cb9d1ce26dfd4346cb98d1e4a69c9065052c8d4e66bfb19151212347b",
+    "output_ids": [
+      785,
+      9282,
+      5269
+    ],
+    "output_text": "The observatory"
+  },
+  {
+    "request_id": "r0028",
+    "prompt_tokens": 81,
+    "prompt_sha256": "9cb36d08c5b0d82870adbbb071333fb2fe49b61e0ad677d00ca4f20cc2d8527d",
+    "output_ids": [
+      28715,
+      389,
+      279,
+      4008,
+      3897
+    ],
+    "output_text": "Based on the description provided"
+  },
+  {
+    "request_id": "r0029",
+    "prompt_tokens": 81,
+    "prompt_sha256": "76c3071925398f30b484dad673fd1a720fd30de70d6f9baaf3fe46a9071740ef",
+    "output_ids": [
+      1249,
+      8253,
+      279
+    ],
+    "output_text": "To determine the"
+  },
+  {
+    "request_id": "r0030",
+    "prompt_tokens": 81,
+    "prompt_sha256": "5f693237deaf530984c2793efb0c0a0ebc32ddcace614e24fc15b94b5524f029",
+    "output_ids": [
+      1249,
+      8253,
+      1246,
+      1657,
+      27373
+    ],
+    "output_text": "To determine how many rolls"
+  },
+  {
+    "request_id": "r0031",
+    "prompt_tokens": 97,
+    "prompt_sha256": "5b8fa07c15f1abb0130610c29ab38443a9a25d9600a6cdd045dfaa821a79a5e6",
+    "output_ids": [
+      785,
+      9282,
+      5269
+    ],
+    "output_text": "The observatory"
+  }
+]

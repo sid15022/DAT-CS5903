@@ -1,0 +1,16 @@
+{
+  "run_id": "test-0-sparse_worker-0-control",
+  "config_id": "95e228540c9556a62173",
+  "duration_s": 4.0,
+  "n_completed_requests": 161,
+  "n_right_censored_requests": 0,
+  "offered": 161,
+  "accepted": 161,
+  "verified_loads": 161,
+  "applied_stage_operations": 0,
+  "trace_bytes": 787405,
+  "collector_cpu_s": 0.4910989999999984,
+  "coordinator_peak_rss_kib": 142804,
+  "synthetic_only": false,
+  "backend": "numpy"
+}

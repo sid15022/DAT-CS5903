@@ -1,0 +1,16 @@
+{
+  "run_id": "overhead-1-off",
+  "config_id": "95e228540c9556a62173",
+  "duration_s": 12.0,
+  "n_completed_requests": 466,
+  "n_right_censored_requests": 0,
+  "offered": 466,
+  "accepted": 466,
+  "verified_loads": 466,
+  "applied_stage_operations": 0,
+  "trace_bytes": 0,
+  "collector_cpu_s": 1.340151999999999,
+  "coordinator_peak_rss_kib": 136716,
+  "synthetic_only": false,
+  "backend": "numpy"
+}

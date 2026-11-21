@@ -1,0 +1,11 @@
+{
+  "run_id": "prefill-fault",
+  "duration_s": 47.4182391090003,
+  "requests": 32,
+  "forward_records": 124,
+  "applied_delay_steps": 16,
+  "target": "p1",
+  "onset_s": 8.36133114300037,
+  "end_s": 39.99087632999999,
+  "seed": 918
+}

@@ -1,0 +1,11 @@
+{
+  "run_id": "threshold",
+  "duration_s": 28.624383302000297,
+  "requests": 32,
+  "forward_records": 124,
+  "applied_delay_steps": 0,
+  "target": null,
+  "onset_s": 6.679387728000165,
+  "end_s": 21.464833381000062,
+  "seed": 712
+}

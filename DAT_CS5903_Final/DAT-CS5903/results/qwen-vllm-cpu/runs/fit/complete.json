@@ -1,0 +1,11 @@
+{
+  "run_id": "fit",
+  "duration_s": 41.75079314499999,
+  "requests": 48,
+  "forward_records": 176,
+  "applied_delay_steps": 0,
+  "target": null,
+  "onset_s": 7.4548016100002314,
+  "end_s": 21.558123981000335,
+  "seed": 710
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "test-0-prefill-0",
+  "config_id": "95e228540c9556a62173",
+  "duration_s": 4.0,
+  "n_completed_requests": 170,
+  "n_right_censored_requests": 1,
+  "offered": 171,
+  "accepted": 171,
+  "verified_loads": 170,
+  "applied_stage_operations": 36,
+  "trace_bytes": 832054,
+  "collector_cpu_s": 0.5485290000000003,
+  "coordinator_peak_rss_kib": 141400,
+  "synthetic_only": false,
+  "backend": "numpy"
+}

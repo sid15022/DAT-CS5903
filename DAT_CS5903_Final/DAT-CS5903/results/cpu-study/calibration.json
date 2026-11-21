@@ -1,0 +1,40 @@
+{
+  "baseline_sha256": "954c7bceeb107f7159304ae1a70e39cc476ce88f4c28d671decedeedc1dc4224",
+  "run_ids": [
+    "fit-0",
+    "fit-1",
+    "fit-2",
+    "fit-3",
+    "scale-0",
+    "scale-1",
+    "scale-2",
+    "scale-3",
+    "threshold-0",
+    "threshold-1",
+    "threshold-2",
+    "threshold-3"
+  ],
+  "thresholds": {
+    "conditioned": 0.818067968493824,
+    "historical": 0.6946801052015411,
+    "work_rate": 0.6233721668424826,
+    "matched_peer": 2.7161154583857074
+  },
+  "demand_threshold": 2.0,
+  "components": {
+    "prefill": [
+      "p1",
+      "p2"
+    ],
+    "transfer": [
+      "l11",
+      "l12",
+      "l21",
+      "l22"
+    ],
+    "decode": [
+      "d1",
+      "d2"
+    ]
+  }
+}

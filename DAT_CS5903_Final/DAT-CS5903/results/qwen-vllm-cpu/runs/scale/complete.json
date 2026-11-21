@@ -1,0 +1,11 @@
+{
+  "run_id": "scale",
+  "duration_s": 29.326973598999757,
+  "requests": 32,
+  "forward_records": 128,
+  "applied_delay_steps": 0,
+  "target": null,
+  "onset_s": 7.364171674999852,
+  "end_s": 21.677382081999895,
+  "seed": 711
+}

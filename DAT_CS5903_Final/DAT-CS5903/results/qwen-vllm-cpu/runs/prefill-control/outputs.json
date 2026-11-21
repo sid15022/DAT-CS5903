@@ -1,0 +1,382 @@
+[
+  {
+    "request_id": "r0000",
+    "prompt_tokens": 97,
+    "prompt_sha256": "4fd855f178b05452a39b7838b4ac50add696d52626810d3e2aee6ae6e5991f76",
+    "output_ids": [
+      785,
+      9282,
+      5269
+    ],
+    "output_text": "The observatory"
+  },
+  {
+    "request_id": "r0001",
+    "prompt_tokens": 97,
+    "prompt_sha256": "41836a91f65dc98f215a66a9de80e78d69836c6e4868159b6072e6997ec455b0",
+    "output_ids": [
+      28715,
+      389,
+      279
+    ],
+    "output_text": "Based on the"
+  },
+  {
+    "request_id": "r0002",
+    "prompt_tokens": 81,
+    "prompt_sha256": "bc72b4de302c0535243f5c7b93fca496bc6c67a755958a903a4327e87996f20b",
+    "output_ids": [
+      785,
+      11618,
+      8090,
+      374,
+      220
+    ],
+    "output_text": "The journey duration is "
+  },
+  {
+    "request_id": "r0003",
+    "prompt_tokens": 97,
+    "prompt_sha256": "9ffe9dfec9c0d361a35e24f67ca9aa8ab2c5712f1770d51b487fbf84bec02301",
+    "output_ids": [
+      1249,
+      8253,
+      1246,
+      1657
+    ],
+    "output_text": "To determine how many"
+  },
+  {
+    "request_id": "r0004",
+    "prompt_tokens": 97,
+    "prompt_sha256": "c883ee4b7088b3b1e1b67165f20f4062b98e113d62818b6d5504c3263a2e259a",
+    "output_ids": [
+      785,
+      9282,
+      5269
+    ],
+    "output_text": "The observatory"
+  },
+  {
+    "request_id": "r0005",
+    "prompt_tokens": 97,
+    "prompt_sha256": "24fde5ad06b311c9c065861f99f974c8ddf55050b8b448ff2d99e6460fac8fd8",
+    "output_ids": [
+      28715,
+      389,
+      279,
+      4008,
+      3897
+    ],
+    "output_text": "Based on the description provided"
+  },
+  {
+    "request_id": "r0006",
+    "prompt_tokens": 97,
+    "prompt_sha256": "970cd24a2467c156183aef735f6d9072980b09ef01a5ec141237b500cb749bec",
+    "output_ids": [
+      1249,
+      8253,
+      279,
+      2790
+    ],
+    "output_text": "To determine the total"
+  },
+  {
+    "request_id": "r0007",
+    "prompt_tokens": 81,
+    "prompt_sha256": "ca248e4b9c3232f5e6462134b68380da49d5c47ca52693660df84b730bf93454",
+    "output_ids": [
+      1249,
+      8253,
+      1246
+    ],
+    "output_text": "To determine how"
+  },
+  {
+    "request_id": "r0008",
+    "prompt_tokens": 81,
+    "prompt_sha256": "829461718a3a8c7dd809a894371c3b968bb40ae3bd5f5a363639a56df681c750",
+    "output_ids": [
+      785,
+      9282,
+      5269,
+      5711,
+      264
+    ],
+    "output_text": "The observatory uses a"
+  },
+  {
+    "request_id": "r0009",
+    "prompt_tokens": 65,
+    "prompt_sha256": "2b70f4927ebc154aef7a25d0eda08eb2c122dffc18c7531deaf355cfd14f4844",
+    "output_ids": [
+      28715,
+      389,
+      279,
+      4008,
+      3897
+    ],
+    "output_text": "Based on the description provided"
+  },
+  {
+    "request_id": "r0010",
+    "prompt_tokens": 81,
+    "prompt_sha256": "5728bcc8e486308c2ea91ec17ada4bdbe746ceaf7f5451312e33504e9b7b7dfd",
+    "output_ids": [
+      785,
+      11618,
+      8090,
+      374,
+      220
+    ],
+    "output_text": "The journey duration is "
+  },
+  {
+    "request_id": "r0011",
+    "prompt_tokens": 97,
+    "prompt_sha256": "8e618e45a465b0dfadff77e0e335c41afbeeb6152d48f23ca5b0279086e17c69",
+    "output_ids": [
+      1249,
+      8253,
+      1246,
+      1657
+    ],
+    "output_text": "To determine how many"
+  },
+  {
+    "request_id": "r0012",
+    "prompt_tokens": 81,
+    "prompt_sha256": "b1f402677b55f8d5a6ca7feac93cb889db9335a019379e3e587841ddace841e3",
+    "output_ids": [
+      785,
+      9282,
+      5269
+    ],
+    "output_text": "The observatory"
+  },
+  {
+    "request_id": "r0013",
+    "prompt_tokens": 65,
+    "prompt_sha256": "3adca56d2f1ba029e7e766c322cbb8b8bf2f96d9d1b1005386cd6e913ec77ca4",
+    "output_ids": [
+      28715,
+      389,
+      279
+    ],
+    "output_text": "Based on the"
+  },
+  {
+    "request_id": "r0014",
+    "prompt_tokens": 81,
+    "prompt_sha256": "99d0203c79fd4817fbfecc803c25a11afc31247fac980b638f637e5c324c2db3",
+    "output_ids": [
+      785,
+      11618,
+      8090
+    ],
+    "output_text": "The journey duration"
+  },
+  {
+    "request_id": "r0015",
+    "prompt_tokens": 81,
+    "prompt_sha256": "369f1e3937992fdc8ddacc297bfd5aefcccb1552a69a213c583d024c3295ade4",
+    "output_ids": [
+      1249,
+      8253,
+      1246
+    ],
+    "output_text": "To determine how"
+  },
+  {
+    "request_id": "r0016",
+    "prompt_tokens": 97,
+    "prompt_sha256": "d2b0cca71068b6c18bd8e23bc3c587728f04b6db1c440a5f71e738026c65fb78",
+    "output_ids": [
+      785,
+      9282,
+      5269,
+      5711
+    ],
+    "output_text": "The observatory uses"
+  },
+  {
+    "request_id": "r0017",
+    "prompt_tokens": 81,
+    "prompt_sha256": "9566325212edc514427026a4ceffb724b5e0abfce2698754b0be90a86f70ada4",
+    "output_ids": [
+      28715,
+      389,
+      279
+    ],
+    "output_text": "Based on the"
+  },
+  {
+    "request_id": "r0018",
+    "prompt_tokens": 97,
+    "prompt_sha256": "70d9d88028561ad11256792aa32e79d81f0d4b55bc788044c64f19e2050d0fe8",
+    "output_ids": [
+      1249,
+      8253,
+      279
+    ],
+    "output_text": "To determine the"
+  },
+  {
+    "request_id": "r0019",
+    "prompt_tokens": 97,
+    "prompt_sha256": "19bcb7618c3101bdeeb1be0d051ce9d4cd17e9f6504f513ec13e5dd75d68a7a7",
+    "output_ids": [
+      1249,
+      8253,
+      1246,
+      1657
+    ],
+    "output_text": "To determine how many"
+  },
+  {
+    "request_id": "r0020",
+    "prompt_tokens": 81,
+    "prompt_sha256": "441f47addaeff0c5633cf263ed653bac29a79dd23eacbe36149d8d72fcd14533",
+    "output_ids": [
+      785,
+      9282,
+      5269
+    ],
+    "output_text": "The observatory"
+  },
+  {
+    "request_id": "r0021",
+    "prompt_tokens": 97,
+    "prompt_sha256": "86a1239e2f6b355ae8116350f01b8c8362267858aea8f339e845836de936c8e3",
+    "output_ids": [
+      28715,
+      389,
+      279,
+      1995,
+      3897
+    ],
+    "output_text": "Based on the information provided"
+  },
+  {
+    "request_id": "r0022",
+    "prompt_tokens": 65,
+    "prompt_sha256": "b77e75c7a216acaeb43c16fdeb192aab1af46fdb0498cc8836cd7843e0578d92",
+    "output_ids": [
+      785,
+      11618,
+      8090,
+      374,
+      220
+    ],
+    "output_text": "The journey duration is "
+  },
+  {
+    "request_id": "r0023",
+    "prompt_tokens": 97,
+    "prompt_sha256": "953b3ca0c70255dec09d4931ccd7ffd2034c95d263fcbe1bf4ec6baa35e03250",
+    "output_ids": [
+      1249,
+      8253,
+      1246
+    ],
+    "output_text": "To determine how"
+  },
+  {
+    "request_id": "r0024",
+    "prompt_tokens": 97,
+    "prompt_sha256": "b8ccfd3d80ce95754a3cda7faaa182d7962cf762a1773950ee9b8d2bb9d29137",
+    "output_ids": [
+      785,
+      9282,
+      5269,
+      5711
+    ],
+    "output_text": "The observatory uses"
+  },
+  {
+    "request_id": "r0025",
+    "prompt_tokens": 65,
+    "prompt_sha256": "42e0dcb03e92f26e484d31c7ef9b65ae7db6056183390d8eb82d60384ead5101",
+    "output_ids": [
+      28715,
+      389,
+      279,
+      4008,
+      3897
+    ],
+    "output_text": "Based on the description provided"
+  },
+  {
+    "request_id": "r0026",
+    "prompt_tokens": 97,
+    "prompt_sha256": "2d35c8a218682d842503402c105f62e238c6fa706f489faf20c8585e15d383ba",
+    "output_ids": [
+      1249,
+      8253,
+      279,
+      2790
+    ],
+    "output_text": "To determine the total"
+  },
+  {
+    "request_id": "r0027",
+    "prompt_tokens": 65,
+    "prompt_sha256": "cefbab8a4289308cec59b85cacc3444300706f117602ebd175a979b16a4815ef",
+    "output_ids": [
+      1249,
+      8253,
+      1246
+    ],
+    "output_text": "To determine how"
+  },
+  {
+    "request_id": "r0028",
+    "prompt_tokens": 97,
+    "prompt_sha256": "1fea01b88fc8d5869005e089ace536720f82508a4dbe4b79fa544a3f23996485",
+    "output_ids": [
+      785,
+      9282,
+      5269,
+      5711,
+      264
+    ],
+    "output_text": "The observatory uses a"
+  },
+  {
+    "request_id": "r0029",
+    "prompt_tokens": 65,
+    "prompt_sha256": "4eafd17d1fab80d7afcdb9ec6d227bc51c74bf965e1fc66dc33320ff83149c9f",
+    "output_ids": [
+      28715,
+      389,
+      279
+    ],
+    "output_text": "Based on the"
+  },
+  {
+    "request_id": "r0030",
+    "prompt_tokens": 97,
+    "prompt_sha256": "aad2b274a0cd45a71c691a1da5ea7f771bfb909c38d8b5443932c78288021090",
+    "output_ids": [
+      1249,
+      8253,
+      279,
+      2790,
+      11618
+    ],
+    "output_text": "To determine the total journey"
+  },
+  {
+    "request_id": "r0031",
+    "prompt_tokens": 97,
+    "prompt_sha256": "ed4bcc8dace60bf566e6ecc59c58b05c43852992ed84c8eeddcf417763c37fa0",
+    "output_ids": [
+      1249,
+      8253,
+      1246,
+      1657
+    ],
+    "output_text": "To determine how many"
+  }
+]

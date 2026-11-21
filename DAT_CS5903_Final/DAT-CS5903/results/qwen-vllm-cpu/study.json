@@ -1,0 +1,67 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "vllm": "0.17.0",
+  "torch": "2.10.0+cpu",
+  "device": "CPU",
+  "dtype": "float32",
+  "local_collectives": true,
+  "timing": "synchronous model forward on one rank",
+  "input_policy": "serial closed-loop",
+  "transfer_visibility": "no physical handoff in this study",
+  "config_id": "87cdc933ab676ce02cff",
+  "window_s": 4,
+  "cadence_s": 1,
+  "intervention": "3x synchronous model-forward service on requests 8 to 23 inclusive (zero-based)",
+  "paired_outputs_identical": true,
+  "outcomes": [
+    {
+      "run_id": "prefill-control",
+      "target": null,
+      "requests": 32,
+      "applied_delay_steps": 0,
+      "first_ranking": [
+        "d1"
+      ],
+      "first_ranking_delay_s": 13.076980469000318,
+      "false_episodes": 1,
+      "duration_s": 27.815618429000097
+    },
+    {
+      "run_id": "prefill-fault",
+      "target": "p1",
+      "requests": 32,
+      "applied_delay_steps": 16,
+      "first_ranking": [
+        "p1"
+      ],
+      "first_ranking_delay_s": 2.6386688569996295,
+      "false_episodes": null,
+      "duration_s": 47.4182391090003
+    },
+    {
+      "run_id": "decode-fault",
+      "target": "d1",
+      "requests": 32,
+      "applied_delay_steps": 49,
+      "first_ranking": [
+        "p1"
+      ],
+      "first_ranking_delay_s": 1.1368185500000436,
+      "false_episodes": null,
+      "duration_s": 40.36042089700004
+    },
+    {
+      "run_id": "decode-control",
+      "target": null,
+      "requests": 32,
+      "applied_delay_steps": 0,
+      "first_ranking": [
+        "d1"
+      ],
+      "first_ranking_delay_s": 0.1721513780003079,
+      "false_episodes": 1,
+      "duration_s": 28.877246013999866
+    }
+  ]
+}

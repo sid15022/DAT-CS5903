@@ -1,0 +1,11 @@
+{
+  "run_id": "prefill-control",
+  "duration_s": 27.815618429000097,
+  "requests": 32,
+  "forward_records": 124,
+  "applied_delay_steps": 0,
+  "target": null,
+  "onset_s": 6.923019530999682,
+  "end_s": 20.128538787999787,
+  "seed": 918
+}
