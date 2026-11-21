@@ -1,6 +1,6 @@
 # Passive fail-slow diagnosis in disaggregated LLM inference
 
-**CS5903 · Evaluator handover · Siddharth V H (CS24MTECH15022)**
+**CS5903 · Project 25 · Group 5 · Evaluator handover · Siddharth V H (CS24MTECH15022)**
 
 Open the [project report](docs/Project_Report.pdf), [architecture decisions](docs/Architecture_Decision_Records.md) and [evidence index and handover](docs/Evidence.md). The [source and full runbook](DAT_CS5903_Final/DAT-CS5903/README.md) are under DAT_CS5903_Final/DAT-CS5903. On four NVIDIA A10Gs, the conditioned detector ranked the correct component first in 8 of 12 held-out GPU incidents. It abstained on the two sparse-worker and two hidden-transfer incidents. The median time to a correct top ranking was 12.5 s among detected incidents. Three false episodes in 16 monitored healthy minutes exceeded the provisional one-per-hour target. [Full GPU results](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/summary.csv).
 

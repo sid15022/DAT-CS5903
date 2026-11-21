@@ -1,11 +1,11 @@
 # Final submission message
 
-**Subject** · CS5903 final project submission — Passive Fail Slow Diagnosis in Disaggregated LLM Inference
+**Subject** · CS5903 final project submission (Project 25, Group 5) — Passive Fail Slow Diagnosis in Disaggregated LLM Inference
 
 | Course field | Submission |
 |---|---|
-| Project ID | [enter official project ID] |
-| Group number | [enter official group number] |
+| Project ID | 25 |
+| Group number | 5 |
 | Student | Siddharth V H (CS24MTECH15022) |
 | Repository | https://github.com/sid15022/DAT-CS5903 |
 | Stable submission | `cs5903-final-2026-gpu` · [dd51969ee5c8b6d78a137d29129f61f6a0790b07](https://github.com/sid15022/DAT-CS5903/tree/dd51969ee5c8b6d78a137d29129f61f6a0790b07) |
@@ -18,7 +18,7 @@ The study ran Qwen2.5-0.5B-Instruct on vLLM across four NVIDIA A10G GPUs for 40 
 
 ## Before sending
 
-Fill in the two course allocation fields and confirm the member list. An evaluator can verify the archived four-GPU study from the repository root with `python evaluation/check_gpu_study.py`.
+An evaluator can verify the archived four-GPU study from the repository root with `python evaluation/check_gpu_study.py`.
 
 The stable checkout above is available on GitHub. The annotated tag is included in [Submission_Tag.bundle](Submission_Tag.bundle). To publish the tag from an authenticated repository clone, run the following from its root.
 
