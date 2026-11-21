@@ -8,6 +8,8 @@ In a four-GPU vLLM experiment, the detector ranked the affected component first 
 
 [Project report](docs/Project_Report.pdf) · [Final presentation](docs/Final_Project_Presentation.pptx) · [Experimental evaluation and results](docs/Experimental_Evaluation_and_Results.md) · [Mathematical methods and worked GPU example](docs/Mathematical_Methods.md) · [Architecture decisions](docs/Architecture_Decision_Records.md) · [Evidence and reproduction](docs/Evidence.md) · [Installation and runbook](DAT_CS5903_Final/DAT-CS5903/README.md)
 
+[Recorded project demonstration](docs/Project_Demonstration.mp4) (10:25, synthetic narration, English captions and 15 slide chapters) · [Read-aloud script](docs/Recording_Script.md) · [Presenter PDF](docs/Recording_Script.pdf)
+
 ## Quick demonstration
 
 From a clean clone on Linux with Python 3.12:
