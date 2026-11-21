@@ -1,0 +1,198 @@
+test_rejects_grouped_tokens_and_missing_terminal_event (test_native_server.NativeServing.test_rejects_grouped_tokens_and_missing_terminal_event) ... ok
+test_request_ids_and_real_loopback_stream (test_native_server.NativeServing.test_request_ids_and_real_loopback_stream) ... ok
+test_unjoined_or_missing_forward_fails (test_native_server.NativeServing.test_unjoined_or_missing_forward_fails) ... ok
+test_duplicates_rejected (test_pipeline.PassiveDiagnosis.test_duplicates_rejected) ... ok
+test_labels_cannot_cross_boundary (test_pipeline.PassiveDiagnosis.test_labels_cannot_cross_boundary) ... ok
+test_late_arrival_and_future_invariance (test_pipeline.PassiveDiagnosis.test_late_arrival_and_future_invariance) ... ok
+test_missing_evidence_or_unseen_configuration_abstains (test_pipeline.PassiveDiagnosis.test_missing_evidence_or_unseen_configuration_abstains) ... ok
+test_no_peer_in_one_by_one (test_pipeline.PassiveDiagnosis.test_no_peer_in_one_by_one) ... ok
+test_pairs_match_offered_work (test_pipeline.PassiveDiagnosis.test_pairs_match_offered_work) ... ok
+test_real_cache_handoff_is_token_equivalent (test_pipeline.PassiveDiagnosis.test_real_cache_handoff_is_token_equivalent) ... ok
+test_timestamp_semantics (test_pipeline.PassiveDiagnosis.test_timestamp_semantics) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.685s
+
+OK
+PASS: four simulated methods, 240 Qwen requests, 934 forwards, 64 matched outputs, 520 decisions
+{
+  "config_id": "95e228540c9556a62173",
+  "profile": {
+    "host": "741bfab5b9ed",
+    "workers": {
+      "p1": {
+        "engine": "numpy-causal-attention",
+        "numpy": "2.3.5",
+        "weights_seed": 717,
+        "vocab": 257,
+        "device": "cpu",
+        "transfer": "npz-copy",
+        "batch_size": 1
+      },
+      "p2": {
+        "engine": "numpy-causal-attention",
+        "numpy": "2.3.5",
+        "weights_seed": 717,
+        "vocab": 257,
+        "device": "cpu",
+        "transfer": "npz-copy",
+        "batch_size": 1
+      },
+      "d1": {
+        "engine": "numpy-causal-attention",
+        "numpy": "2.3.5",
+        "weights_seed": 717,
+        "vocab": 257,
+        "device": "cpu",
+        "transfer": "npz-copy",
+        "batch_size": 1
+      },
+      "d2": {
+        "engine": "numpy-causal-attention",
+        "numpy": "2.3.5",
+        "weights_seed": 717,
+        "vocab": 257,
+        "device": "cpu",
+        "transfer": "npz-copy",
+        "batch_size": 1
+      }
+    },
+    "topology": {
+      "prefill": [
+        "p1",
+        "p2"
+      ],
+      "transfer": [
+        "l11",
+        "l12",
+        "l21",
+        "l22"
+      ],
+      "decode": [
+        "d1",
+        "d2"
+      ]
+    },
+    "clock": "single-host CLOCK_MONOTONIC",
+    "stage_semantics": "file-kv-handoff-v1"
+  },
+  "paths": [
+    {
+      "prefill": "p1",
+      "decode": "d1",
+      "bytes": 33514,
+      "copy_ms": 0.28956100140931085,
+      "prompt_tokens": 129,
+      "loaded_tokens": 129,
+      "reference_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "split_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "exact_match": true
+    },
+    {
+      "prefill": "p1",
+      "decode": "d2",
+      "bytes": 33514,
+      "copy_ms": 0.28265599939913955,
+      "prompt_tokens": 129,
+      "loaded_tokens": 129,
+      "reference_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "split_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "exact_match": true
+    },
+    {
+      "prefill": "p2",
+      "decode": "d1",
+      "bytes": 33514,
+      "copy_ms": 0.19667100059450604,
+      "prompt_tokens": 129,
+      "loaded_tokens": 129,
+      "reference_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "split_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "exact_match": true
+    },
+    {
+      "prefill": "p2",
+      "decode": "d2",
+      "bytes": 33514,
+      "copy_ms": 0.2224630006821826,
+      "prompt_tokens": 129,
+      "loaded_tokens": 129,
+      "reference_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "split_ids": [
+        163,
+        229,
+        142,
+        180,
+        12,
+        134,
+        194,
+        233
+      ],
+      "exact_match": true
+    }
+  ]
+}
+PASS: unseen 83-token CPU fixture, 9 output IDs [172, 187, 247, 78, 187, 247, 78, 187, 247]
