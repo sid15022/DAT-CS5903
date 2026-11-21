@@ -1,0 +1,228 @@
+{
+  "config_id": "9de6741bc819124553d0",
+  "profile": {
+    "host": "default",
+    "workers": {
+      "p1": {
+        "engine": "vllm-http",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "device": "NVIDIA A10G",
+        "device_uuid": "37f0a0a3-629d-2b44-7033-ac051490fee8",
+        "visible_device": "0",
+        "vocab": 151665,
+        "batch_size": 1,
+        "dtype": "float16",
+        "block_size": 16,
+        "workload": "chat-template-v1",
+        "attention_backend": "FLASH_ATTN",
+        "vllm": "0.10.2"
+      },
+      "p2": {
+        "engine": "vllm-http",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "device": "NVIDIA A10G",
+        "device_uuid": "741f5d9e-bcf9-e75f-7b5d-0ab29df20080",
+        "visible_device": "1",
+        "vocab": 151665,
+        "batch_size": 1,
+        "dtype": "float16",
+        "block_size": 16,
+        "workload": "chat-template-v1",
+        "attention_backend": "FLASH_ATTN",
+        "vllm": "0.10.2"
+      },
+      "d1": {
+        "engine": "vllm-http",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "device": "NVIDIA A10G",
+        "device_uuid": "fd721b43-7378-0f29-e216-7522ec7659ee",
+        "visible_device": "2",
+        "vocab": 151665,
+        "batch_size": 1,
+        "dtype": "float16",
+        "block_size": 16,
+        "workload": "chat-template-v1",
+        "attention_backend": "FLASH_ATTN",
+        "vllm": "0.10.2"
+      },
+      "d2": {
+        "engine": "vllm-http",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "device": "NVIDIA A10G",
+        "device_uuid": "355a76b7-6309-c591-ccbc-4aabc0da22d3",
+        "visible_device": "3",
+        "vocab": 151665,
+        "batch_size": 1,
+        "dtype": "float16",
+        "block_size": 16,
+        "workload": "chat-template-v1",
+        "attention_backend": "FLASH_ATTN",
+        "vllm": "0.10.2"
+      }
+    },
+    "topology": {
+      "prefill": [
+        "p1",
+        "p2"
+      ],
+      "transfer": [
+        "l11",
+        "l12",
+        "l21",
+        "l22"
+      ],
+      "decode": [
+        "d1",
+        "d2"
+      ]
+    },
+    "clock": "single-host CLOCK_MONOTONIC",
+    "stage_semantics": "vllm-server-forward-v1"
+  },
+  "paths": [
+    {
+      "prompt_text": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nCase 0-0. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is\nWhat is the capital of France? Answer in one short sentence.<|im_end|>\n<|im_start|>assistant\n",
+      "generated_text": "Paris is the capital of France.",
+      "endpoint": "/v1/completions",
+      "forward_records_checked": 16,
+      "prefill": "p1",
+      "decode": "d1",
+      "bytes": 1574976,
+      "copy_ms": 3.6828710003646847,
+      "prompt_tokens": 129,
+      "loaded_tokens": 128,
+      "reference_ids": [
+        59604,
+        374,
+        279,
+        6722,
+        315,
+        9625,
+        13,
+        151645
+      ],
+      "split_ids": [
+        59604,
+        374,
+        279,
+        6722,
+        315,
+        9625,
+        13,
+        151645
+      ],
+      "exact_match": true
+    },
+    {
+      "prompt_text": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nCase 0-0. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is\nWhat is the capital of France? Answer in one short sentence.<|im_end|>\n<|im_start|>assistant\n",
+      "generated_text": "Paris is the capital of France.",
+      "endpoint": "/v1/completions",
+      "forward_records_checked": 16,
+      "prefill": "p1",
+      "decode": "d2",
+      "bytes": 1574976,
+      "copy_ms": 3.699761000007129,
+      "prompt_tokens": 129,
+      "loaded_tokens": 128,
+      "reference_ids": [
+        59604,
+        374,
+        279,
+        6722,
+        315,
+        9625,
+        13,
+        151645
+      ],
+      "split_ids": [
+        59604,
+        374,
+        279,
+        6722,
+        315,
+        9625,
+        13,
+        151645
+      ],
+      "exact_match": true
+    },
+    {
+      "prompt_text": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nCase 0-0. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is\nWhat is the capital of France? Answer in one short sentence.<|im_end|>\n<|im_start|>assistant\n",
+      "generated_text": "Paris is the capital of France.",
+      "endpoint": "/v1/completions",
+      "forward_records_checked": 16,
+      "prefill": "p2",
+      "decode": "d1",
+      "bytes": 1574976,
+      "copy_ms": 3.6520809999274206,
+      "prompt_tokens": 129,
+      "loaded_tokens": 128,
+      "reference_ids": [
+        59604,
+        374,
+        279,
+        6722,
+        315,
+        9625,
+        13,
+        151645
+      ],
+      "split_ids": [
+        59604,
+        374,
+        279,
+        6722,
+        315,
+        9625,
+        13,
+        151645
+      ],
+      "exact_match": true
+    },
+    {
+      "prompt_text": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nCase 0-0. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is another French city. Paris is the capital of France. Lyon is\nWhat is the capital of France? Answer in one short sentence.<|im_end|>\n<|im_start|>assistant\n",
+      "generated_text": "Paris is the capital of France.",
+      "endpoint": "/v1/completions",
+      "forward_records_checked": 16,
+      "prefill": "p2",
+      "decode": "d2",
+      "bytes": 1574976,
+      "copy_ms": 3.6719299996548216,
+      "prompt_tokens": 129,
+      "loaded_tokens": 128,
+      "reference_ids": [
+        59604,
+        374,
+        279,
+        6722,
+        315,
+        9625,
+        13,
+        151645
+      ],
+      "split_ids": [
+        59604,
+        374,
+        279,
+        6722,
+        315,
+        9625,
+        13,
+        151645
+      ],
+      "exact_match": true
+    }
+  ]
+}

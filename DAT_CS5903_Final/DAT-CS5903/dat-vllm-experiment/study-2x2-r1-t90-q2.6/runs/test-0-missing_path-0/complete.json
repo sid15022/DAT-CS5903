@@ -1,0 +1,18 @@
+{
+  "run_id": "test-0-missing_path-0",
+  "config_id": "9de6741bc819124553d0",
+  "duration_s": 90.0,
+  "n_completed_requests": 215,
+  "n_right_censored_requests": 0,
+  "offered": 215,
+  "accepted": 215,
+  "verified_loads": 215,
+  "applied_stage_operations": 17,
+  "trace_bytes": 910418,
+  "collector_cpu_s": 1.9457779999999971,
+  "coordinator_peak_rss_kib": 938440,
+  "synthetic_only": false,
+  "backend": "vllm-http",
+  "observer_cpu_s": 1.334365,
+  "observer_peak_rss_kib": 938440
+}

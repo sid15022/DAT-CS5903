@@ -1,0 +1,18 @@
+{
+  "run_id": "test-h0-0",
+  "config_id": "9de6741bc819124553d0",
+  "duration_s": 90.0,
+  "n_completed_requests": 236,
+  "n_right_censored_requests": 0,
+  "offered": 236,
+  "accepted": 236,
+  "verified_loads": 236,
+  "applied_stage_operations": 0,
+  "trace_bytes": 1070569,
+  "collector_cpu_s": 2.0886950000000013,
+  "coordinator_peak_rss_kib": 938440,
+  "synthetic_only": false,
+  "backend": "vllm-http",
+  "observer_cpu_s": 1.3629980000000002,
+  "observer_peak_rss_kib": 938440
+}

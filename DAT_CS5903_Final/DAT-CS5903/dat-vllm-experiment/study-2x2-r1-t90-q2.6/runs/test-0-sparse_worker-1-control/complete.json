@@ -1,0 +1,18 @@
+{
+  "run_id": "test-0-sparse_worker-1-control",
+  "config_id": "9de6741bc819124553d0",
+  "duration_s": 90.0,
+  "n_completed_requests": 236,
+  "n_right_censored_requests": 1,
+  "offered": 237,
+  "accepted": 237,
+  "verified_loads": 237,
+  "applied_stage_operations": 0,
+  "trace_bytes": 1146896,
+  "collector_cpu_s": 2.0849509999999896,
+  "coordinator_peak_rss_kib": 946120,
+  "synthetic_only": false,
+  "backend": "vllm-http",
+  "observer_cpu_s": 1.3524209999999999,
+  "observer_peak_rss_kib": 946120
+}

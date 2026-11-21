@@ -1,0 +1,13 @@
+fault,control,common_completed,only_fault,only_control,mismatches
+test-0-prefill-0,test-0-prefill-0-control,250,0,0,0
+test-0-prefill-1,test-0-prefill-1-control,236,0,0,0
+test-0-decode-0,test-0-decode-0-control,246,0,0,0
+test-0-decode-1,test-0-decode-1-control,206,0,0,0
+test-0-transfer-0,test-0-transfer-0-control,229,0,0,0
+test-0-transfer-1,test-0-transfer-1-control,214,0,0,0
+test-0-mixed-0,test-0-mixed-0-control,249,0,0,0
+test-0-mixed-1,test-0-mixed-1-control,238,0,0,0
+test-0-missing_path-0,test-0-missing_path-0-control,215,0,0,0
+test-0-missing_path-1,test-0-missing_path-1-control,271,0,0,0
+test-0-sparse_worker-0,test-0-sparse_worker-0-control,231,0,0,0
+test-0-sparse_worker-1,test-0-sparse_worker-1-control,236,0,0,0

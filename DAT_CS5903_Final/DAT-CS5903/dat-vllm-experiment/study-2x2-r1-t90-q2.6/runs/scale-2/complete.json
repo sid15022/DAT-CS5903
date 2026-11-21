@@ -1,0 +1,16 @@
+{
+  "run_id": "scale-2",
+  "config_id": "9de6741bc819124553d0",
+  "duration_s": 90.0,
+  "n_completed_requests": 479,
+  "n_right_censored_requests": 2,
+  "offered": 481,
+  "accepted": 481,
+  "verified_loads": 480,
+  "applied_stage_operations": 0,
+  "trace_bytes": 2206135,
+  "collector_cpu_s": 4.2389589999999995,
+  "coordinator_peak_rss_kib": 938272,
+  "synthetic_only": false,
+  "backend": "vllm-http"
+}

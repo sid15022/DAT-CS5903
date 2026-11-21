@@ -1,0 +1,16 @@
+{
+  "run_id": "fit-1",
+  "config_id": "9de6741bc819124553d0",
+  "duration_s": 90.0,
+  "n_completed_requests": 248,
+  "n_right_censored_requests": 1,
+  "offered": 249,
+  "accepted": 249,
+  "verified_loads": 249,
+  "applied_stage_operations": 0,
+  "trace_bytes": 1170392,
+  "collector_cpu_s": 2.2433359999999993,
+  "coordinator_peak_rss_kib": 929440,
+  "synthetic_only": false,
+  "backend": "vllm-http"
+}

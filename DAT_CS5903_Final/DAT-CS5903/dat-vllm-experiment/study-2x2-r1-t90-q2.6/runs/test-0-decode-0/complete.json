@@ -1,0 +1,18 @@
+{
+  "run_id": "test-0-decode-0",
+  "config_id": "9de6741bc819124553d0",
+  "duration_s": 90.0,
+  "n_completed_requests": 246,
+  "n_right_censored_requests": 0,
+  "offered": 246,
+  "accepted": 246,
+  "verified_loads": 246,
+  "applied_stage_operations": 203,
+  "trace_bytes": 1159688,
+  "collector_cpu_s": 2.1685819999999936,
+  "coordinator_peak_rss_kib": 938440,
+  "synthetic_only": false,
+  "backend": "vllm-http",
+  "observer_cpu_s": 1.345186,
+  "observer_peak_rss_kib": 938440
+}

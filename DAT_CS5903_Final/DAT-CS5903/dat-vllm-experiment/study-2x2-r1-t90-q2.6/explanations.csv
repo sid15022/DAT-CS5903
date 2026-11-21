@@ -1,0 +1,13 @@
+method,run_id,t_s,truth,explanation,correct
+conditioned,test-h0-3,60.0,workload,unknown,False
+historical,test-h0-3,60.0,workload,unknown,False
+work_rate,test-h0-3,60.0,workload,unknown,False
+matched_peer,test-h0-3,60.0,workload,unknown,False
+conditioned,test-0-decode-1,70.0,degradation,degradation,True
+historical,test-0-decode-1,70.0,degradation,degradation,True
+work_rate,test-0-decode-1,70.0,degradation,degradation,True
+matched_peer,test-0-decode-1,70.0,degradation,degradation,True
+conditioned,test-0-mixed-1,70.0,mixed,degradation,False
+historical,test-0-mixed-1,70.0,mixed,degradation,False
+work_rate,test-0-mixed-1,70.0,mixed,degradation,False
+matched_peer,test-0-mixed-1,70.0,mixed,degradation,False

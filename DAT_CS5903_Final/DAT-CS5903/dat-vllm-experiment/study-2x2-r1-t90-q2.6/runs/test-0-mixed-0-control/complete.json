@@ -1,0 +1,18 @@
+{
+  "run_id": "test-0-mixed-0-control",
+  "config_id": "9de6741bc819124553d0",
+  "duration_s": 90.0,
+  "n_completed_requests": 249,
+  "n_right_censored_requests": 0,
+  "offered": 249,
+  "accepted": 249,
+  "verified_loads": 249,
+  "applied_stage_operations": 0,
+  "trace_bytes": 1206463,
+  "collector_cpu_s": 2.321060000000003,
+  "coordinator_peak_rss_kib": 938440,
+  "synthetic_only": false,
+  "backend": "vllm-http",
+  "observer_cpu_s": 1.3647580000000001,
+  "observer_peak_rss_kib": 938440
+}

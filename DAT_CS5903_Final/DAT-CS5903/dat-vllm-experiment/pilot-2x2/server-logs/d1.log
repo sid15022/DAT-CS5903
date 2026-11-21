@@ -1,0 +1,152 @@
+INFO 11-21 11:46:43 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:46:44 [api_server.py:1896] vLLM API server version 0.10.2
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:46:44 [utils.py:328] non-default args: {'host': '127.0.0.1', 'port': 32941, 'model': 'Qwen/Qwen2.5-0.5B-Instruct', 'dtype': 'float16', 'revision': '7ae557604adf67be50417f59c2c2f167def9a775', 'tokenizer_revision': '7ae557604adf67be50417f59c2c2f167def9a775', 'max_model_len': 512, 'enforce_eager': True, 'generation_config': 'vllm', 'distributed_executor_backend': 'uni', 'block_size': 16, 'gpu_memory_utilization': 0.65, 'enable_prefix_caching': False, 'max_num_batched_tokens': 512, 'max_num_seqs': 1, 'kv_transfer_config': KVTransferConfig(kv_connector='ServerTimingConnector', engine_id='79c21ab0-a0f5-4a19-add5-101bc739e783', kv_buffer_device='cuda', kv_buffer_size=1000000000.0, kv_role='kv_both', kv_rank=None, kv_parallel_size=1, kv_ip='127.0.0.1', kv_port=14579, kv_connector_extra_config={'shared_storage_path': '/home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-i1ahx35u/d1'}, kv_connector_module_path='failslow.connector')}
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:46:52 [__init__.py:742] Resolved architecture: Qwen2ForCausalLM
+[1;36m(APIServer pid=2578)[0;0m WARNING 11-21 11:46:52 [__init__.py:2767] Casting torch.bfloat16 to torch.float16.
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:46:52 [__init__.py:1815] Using max model len 512
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:46:52 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=512.
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:46:52 [__init__.py:3400] Cudagraph is disabled under eager mode
+INFO 11-21 11:46:57 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:46:58 [core.py:654] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:46:58 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='Qwen/Qwen2.5-0.5B-Instruct', speculative_config=None, tokenizer='Qwen/Qwen2.5-0.5B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=7ae557604adf67be50417f59c2c2f167def9a775, tokenizer_revision=7ae557604adf67be50417f59c2c2f167def9a775, trust_remote_code=False, dtype=torch.float16, max_seq_len=512, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=Qwen/Qwen2.5-0.5B-Instruct, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":null,"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":0,"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":0,"local_cache_dir":null}
+[W1121 11:47:01.273127106 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:01 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:01 [factory.py:51] Creating v1 connector with name: ServerTimingConnector and engine_id: 79c21ab0-a0f5-4a19-add5-101bc739e783
+[1;36m(EngineCore_DP0 pid=2618)[0;0m WARNING 11-21 11:47:01 [base.py:84] Initializing KVConnectorBase_V1. This API is experimental and subject to change in the future as we iterate the design.
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:01 [shared_storage_connector.py:89] KVTransferConfig(kv_connector='ServerTimingConnector', engine_id='79c21ab0-a0f5-4a19-add5-101bc739e783', kv_buffer_device='cuda', kv_buffer_size=1000000000.0, kv_role='kv_both', kv_rank=None, kv_parallel_size=1, kv_ip='127.0.0.1', kv_port=14579, kv_connector_extra_config={'shared_storage_path': '/home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-i1ahx35u/d1'}, kv_connector_module_path='failslow.connector')
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:01 [shared_storage_connector.py:90] Shared storage path is /home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-i1ahx35u/d1
+[1;36m(EngineCore_DP0 pid=2618)[0;0m WARNING 11-21 11:47:01 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:01 [gpu_model_runner.py:2338] Starting to load model Qwen/Qwen2.5-0.5B-Instruct...
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:01 [gpu_model_runner.py:2370] Loading model from scratch...
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:01 [cuda.py:322] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:01 [weight_utils.py:348] Using model weights format ['*.safetensors']
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:03 [weight_utils.py:406] No model.safetensors.index.json found in remote.
+[1;36m(EngineCore_DP0 pid=2618)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=2618)[0;0m Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  1.72it/s]
+[1;36m(EngineCore_DP0 pid=2618)[0;0m Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  1.72it/s]
+[1;36m(EngineCore_DP0 pid=2618)[0;0m 
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:03 [default_loader.py:268] Loading weights took 0.58 seconds
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:04 [gpu_model_runner.py:2392] Model loading took 0.9277 GiB and 2.099383 seconds
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:05 [gpu_worker.py:298] Available KV cache memory: 13.37 GiB
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:05 [kv_cache_utils.py:864] GPU KV cache size: 1,168,320 tokens
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:05 [kv_cache_utils.py:868] Maximum concurrency for 512 tokens per request: 2281.88x
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:05 [utils.py:299] `VLLM_KV_CACHE_LAYOUT` environment variable detected. Setting KV cache layout to NHD.
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:05 [gpu_worker.py:391] Free memory on device (21.77/22.06 GiB) on startup. Desired GPU memory utilization is (0.65, 14.34 GiB). Actual usage is 0.93 GiB for weight, 0.03 GiB for peak activation, 0.02 GiB for non-torch memory, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=14199181721` to fit into requested memory, or `--kv-cache-memory=22174775296` to fully utilize gpu memory. Current kv cache memory in use is 14356468121 bytes.
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:05 [core.py:218] init engine (profile, create kv cache, warmup model) took 1.36 seconds
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:06 [factory.py:51] Creating v1 connector with name: ServerTimingConnector and engine_id: 79c21ab0-a0f5-4a19-add5-101bc739e783
+[1;36m(EngineCore_DP0 pid=2618)[0;0m WARNING 11-21 11:47:06 [base.py:84] Initializing KVConnectorBase_V1. This API is experimental and subject to change in the future as we iterate the design.
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:06 [shared_storage_connector.py:89] KVTransferConfig(kv_connector='ServerTimingConnector', engine_id='79c21ab0-a0f5-4a19-add5-101bc739e783', kv_buffer_device='cuda', kv_buffer_size=1000000000.0, kv_role='kv_both', kv_rank=None, kv_parallel_size=1, kv_ip='127.0.0.1', kv_port=14579, kv_connector_extra_config={'shared_storage_path': '/home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-i1ahx35u/d1'}, kv_connector_module_path='failslow.connector')
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:06 [shared_storage_connector.py:90] Shared storage path is /home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-i1ahx35u/d1
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:06 [__init__.py:3400] Cudagraph is disabled under eager mode
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:47:06 [loggers.py:142] Engine 000: vllm cache_config_info with initialization after num_gpu_blocks is: 73020
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:47:06 [async_llm.py:180] Torch profiler disabled. AsyncLLM CPU traces will not be collected.
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:47:06 [api_server.py:1692] Supported_tasks: ['generate']
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:47:06 [api_server.py:1971] Starting vLLM API server 0 on http://127.0.0.1:32941
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:47:06 [launcher.py:36] Available routes are:
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:47:06 [launcher.py:44] Route: /openapi.json, Methods: HEAD, GET
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:47:06 [launcher.py:44] Route: /docs, Methods: HEAD, GET
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:47:06 [launcher.py:44] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:47:06 [launcher.py:44] Route: /redoc, Methods: HEAD, GET
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:47:06 [launcher.py:44] Route: /metrics, Methods: GET
+[1;36m(APIServer pid=2578)[0;0m INFO:     Started server process [2578]
+[1;36m(APIServer pid=2578)[0;0m INFO:     Waiting for application startup.
+[1;36m(APIServer pid=2578)[0;0m INFO:     Application startup complete.
+[1;36m(APIServer pid=2578)[0;0m INFO:     127.0.0.1:33606 - "GET /v1/models HTTP/1.1" 200 OK
+[1;36m(APIServer pid=2578)[0;0m INFO:     127.0.0.1:33610 - "GET /version HTTP/1.1" 200 OK
+[1;36m(APIServer pid=2578)[0;0m INFO:     127.0.0.1:33612 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:07 [shared_storage_connector.py:265] External Cache Hit!
+[1;36m(EngineCore_DP0 pid=2618)[0;0m WARNING 11-21 11:47:07 [cudagraph_dispatcher.py:102] cudagraph dispatching keys are not initialized. No cudagraph will be used.
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:07 [shared_storage_connector.py:160] Inject KV cache of 128 tokens to the paged memory
+[1;36m(EngineCore_DP0 pid=2618)[0;0m WARNING 11-21 11:47:07 [shared_storage_connector.py:152] In connector.start_load_kv, but the attn_metadata is None
+[1;36m(APIServer pid=2578)[0;0m INFO:     127.0.0.1:33620 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:07 [shared_storage_connector.py:265] External Cache Hit!
+[1;36m(EngineCore_DP0 pid=2618)[0;0m INFO 11-21 11:47:07 [shared_storage_connector.py:160] Inject KV cache of 128 tokens to the paged memory
+[1;36m(EngineCore_DP0 pid=2618)[0;0m WARNING 11-21 11:47:07 [shared_storage_connector.py:152] In connector.start_load_kv, but the attn_metadata is None
+[1;36m(APIServer pid=2578)[0;0m WARNING 11-21 11:47:09 [launcher.py:98] port 32941 is used by process psutil.Process(pid=2578, name='python', status='running') launched with command:
+[1;36m(APIServer pid=2578)[0;0m WARNING 11-21 11:47:09 [launcher.py:98] /home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/venv-vllm-0102/bin/python -m vllm.entrypoints.openai.api_server --host 127.0.0.1 --port 32941 --model Qwen/Qwen2.5-0.5B-Instruct --revision 7ae557604adf67be50417f59c2c2f167def9a775 --tokenizer-revision 7ae557604adf67be50417f59c2c2f167def9a775 --dtype float16 --generation-config vllm --enforce-eager --max-model-len 512 --block-size 16 --max-num-batched-tokens 512 --max-num-seqs 1 --no-enable-prefix-caching --distributed-executor-backend uni --gpu-memory-utilization 0.65 --kv-transfer-config {"kv_connector": "ServerTimingConnector", "kv_connector_module_path": "failslow.connector", "kv_role": "kv_both", "kv_connector_extra_config": {"shared_storage_path": "/home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-i1ahx35u/d1"}}
+[1;36m(APIServer pid=2578)[0;0m INFO 11-21 11:47:09 [launcher.py:101] Shutting down FastAPI HTTP server.
+[1;36m(APIServer pid=2578)[0;0m INFO:     Shutting down
+[1;36m(APIServer pid=2578)[0;0m INFO:     Waiting for application shutdown.
+[1;36m(APIServer pid=2578)[0;0m INFO:     Application shutdown complete.
+INFO 11-21 12:03:13 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:14 [api_server.py:1896] vLLM API server version 0.10.2
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:14 [utils.py:328] non-default args: {'host': '127.0.0.1', 'port': 36411, 'model': 'Qwen/Qwen2.5-0.5B-Instruct', 'dtype': 'float16', 'revision': '7ae557604adf67be50417f59c2c2f167def9a775', 'tokenizer_revision': '7ae557604adf67be50417f59c2c2f167def9a775', 'max_model_len': 512, 'enforce_eager': True, 'generation_config': 'vllm', 'distributed_executor_backend': 'uni', 'block_size': 16, 'gpu_memory_utilization': 0.65, 'enable_prefix_caching': False, 'max_num_batched_tokens': 512, 'max_num_seqs': 1, 'kv_transfer_config': KVTransferConfig(kv_connector='ServerTimingConnector', engine_id='01e40303-848e-4d4f-beed-fe0cb9aed64c', kv_buffer_device='cuda', kv_buffer_size=1000000000.0, kv_role='kv_both', kv_rank=None, kv_parallel_size=1, kv_ip='127.0.0.1', kv_port=14579, kv_connector_extra_config={'shared_storage_path': '/home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-q5qrnyhe/d1'}, kv_connector_module_path='failslow.connector')}
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:22 [__init__.py:742] Resolved architecture: Qwen2ForCausalLM
+[1;36m(APIServer pid=3679)[0;0m WARNING 11-21 12:03:22 [__init__.py:2767] Casting torch.bfloat16 to torch.float16.
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:22 [__init__.py:1815] Using max model len 512
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:22 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=512.
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:22 [__init__.py:3400] Cudagraph is disabled under eager mode
+INFO 11-21 12:03:27 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:28 [core.py:654] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:28 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='Qwen/Qwen2.5-0.5B-Instruct', speculative_config=None, tokenizer='Qwen/Qwen2.5-0.5B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=7ae557604adf67be50417f59c2c2f167def9a775, tokenizer_revision=7ae557604adf67be50417f59c2c2f167def9a775, trust_remote_code=False, dtype=torch.float16, max_seq_len=512, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=Qwen/Qwen2.5-0.5B-Instruct, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":null,"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":0,"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":0,"local_cache_dir":null}
+[W1121 12:03:31.086948577 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:31 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:31 [factory.py:51] Creating v1 connector with name: ServerTimingConnector and engine_id: 01e40303-848e-4d4f-beed-fe0cb9aed64c
+[1;36m(EngineCore_DP0 pid=3718)[0;0m WARNING 11-21 12:03:31 [base.py:84] Initializing KVConnectorBase_V1. This API is experimental and subject to change in the future as we iterate the design.
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:31 [shared_storage_connector.py:89] KVTransferConfig(kv_connector='ServerTimingConnector', engine_id='01e40303-848e-4d4f-beed-fe0cb9aed64c', kv_buffer_device='cuda', kv_buffer_size=1000000000.0, kv_role='kv_both', kv_rank=None, kv_parallel_size=1, kv_ip='127.0.0.1', kv_port=14579, kv_connector_extra_config={'shared_storage_path': '/home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-q5qrnyhe/d1'}, kv_connector_module_path='failslow.connector')
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:31 [shared_storage_connector.py:90] Shared storage path is /home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-q5qrnyhe/d1
+[1;36m(EngineCore_DP0 pid=3718)[0;0m WARNING 11-21 12:03:31 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:31 [gpu_model_runner.py:2338] Starting to load model Qwen/Qwen2.5-0.5B-Instruct...
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:31 [gpu_model_runner.py:2370] Loading model from scratch...
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:31 [cuda.py:322] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:31 [weight_utils.py:348] Using model weights format ['*.safetensors']
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:31 [weight_utils.py:406] No model.safetensors.index.json found in remote.
+[1;36m(EngineCore_DP0 pid=3718)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=3718)[0;0m Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  1.74it/s]
+[1;36m(EngineCore_DP0 pid=3718)[0;0m Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  1.74it/s]
+[1;36m(EngineCore_DP0 pid=3718)[0;0m 
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:32 [default_loader.py:268] Loading weights took 0.57 seconds
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:32 [gpu_model_runner.py:2392] Model loading took 0.9277 GiB and 0.851197 seconds
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:33 [gpu_worker.py:298] Available KV cache memory: 13.37 GiB
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:34 [kv_cache_utils.py:864] GPU KV cache size: 1,168,320 tokens
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:34 [kv_cache_utils.py:868] Maximum concurrency for 512 tokens per request: 2281.88x
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:34 [utils.py:299] `VLLM_KV_CACHE_LAYOUT` environment variable detected. Setting KV cache layout to NHD.
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:34 [gpu_worker.py:391] Free memory on device (21.77/22.06 GiB) on startup. Desired GPU memory utilization is (0.65, 14.34 GiB). Actual usage is 0.93 GiB for weight, 0.03 GiB for peak activation, 0.02 GiB for non-torch memory, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=14199181721` to fit into requested memory, or `--kv-cache-memory=22174840832` to fully utilize gpu memory. Current kv cache memory in use is 14356468121 bytes.
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:34 [core.py:218] init engine (profile, create kv cache, warmup model) took 1.34 seconds
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:34 [factory.py:51] Creating v1 connector with name: ServerTimingConnector and engine_id: 01e40303-848e-4d4f-beed-fe0cb9aed64c
+[1;36m(EngineCore_DP0 pid=3718)[0;0m WARNING 11-21 12:03:34 [base.py:84] Initializing KVConnectorBase_V1. This API is experimental and subject to change in the future as we iterate the design.
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:34 [shared_storage_connector.py:89] KVTransferConfig(kv_connector='ServerTimingConnector', engine_id='01e40303-848e-4d4f-beed-fe0cb9aed64c', kv_buffer_device='cuda', kv_buffer_size=1000000000.0, kv_role='kv_both', kv_rank=None, kv_parallel_size=1, kv_ip='127.0.0.1', kv_port=14579, kv_connector_extra_config={'shared_storage_path': '/home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-q5qrnyhe/d1'}, kv_connector_module_path='failslow.connector')
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:34 [shared_storage_connector.py:90] Shared storage path is /home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-q5qrnyhe/d1
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:34 [__init__.py:3400] Cudagraph is disabled under eager mode
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:34 [loggers.py:142] Engine 000: vllm cache_config_info with initialization after num_gpu_blocks is: 73020
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:34 [async_llm.py:180] Torch profiler disabled. AsyncLLM CPU traces will not be collected.
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:34 [api_server.py:1692] Supported_tasks: ['generate']
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:34 [api_server.py:1971] Starting vLLM API server 0 on http://127.0.0.1:36411
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:34 [launcher.py:36] Available routes are:
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:34 [launcher.py:44] Route: /openapi.json, Methods: GET, HEAD
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:34 [launcher.py:44] Route: /docs, Methods: GET, HEAD
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:34 [launcher.py:44] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:34 [launcher.py:44] Route: /redoc, Methods: GET, HEAD
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:34 [launcher.py:44] Route: /metrics, Methods: GET
+[1;36m(APIServer pid=3679)[0;0m INFO:     Started server process [3679]
+[1;36m(APIServer pid=3679)[0;0m INFO:     Waiting for application startup.
+[1;36m(APIServer pid=3679)[0;0m INFO:     Application startup complete.
+[1;36m(APIServer pid=3679)[0;0m INFO:     127.0.0.1:47710 - "GET /v1/models HTTP/1.1" 200 OK
+[1;36m(APIServer pid=3679)[0;0m INFO:     127.0.0.1:47716 - "GET /version HTTP/1.1" 200 OK
+[1;36m(APIServer pid=3679)[0;0m INFO:     127.0.0.1:47726 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:36 [shared_storage_connector.py:265] External Cache Hit!
+[1;36m(EngineCore_DP0 pid=3718)[0;0m WARNING 11-21 12:03:36 [cudagraph_dispatcher.py:102] cudagraph dispatching keys are not initialized. No cudagraph will be used.
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:36 [shared_storage_connector.py:160] Inject KV cache of 128 tokens to the paged memory
+[1;36m(EngineCore_DP0 pid=3718)[0;0m WARNING 11-21 12:03:36 [shared_storage_connector.py:152] In connector.start_load_kv, but the attn_metadata is None
+[1;36m(APIServer pid=3679)[0;0m INFO:     127.0.0.1:47742 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:36 [shared_storage_connector.py:265] External Cache Hit!
+[1;36m(EngineCore_DP0 pid=3718)[0;0m INFO 11-21 12:03:36 [shared_storage_connector.py:160] Inject KV cache of 128 tokens to the paged memory
+[1;36m(EngineCore_DP0 pid=3718)[0;0m WARNING 11-21 12:03:36 [shared_storage_connector.py:152] In connector.start_load_kv, but the attn_metadata is None
+[1;36m(APIServer pid=3679)[0;0m WARNING 11-21 12:03:38 [launcher.py:98] port 36411 is used by process psutil.Process(pid=3679, name='python', status='running') launched with command:
+[1;36m(APIServer pid=3679)[0;0m WARNING 11-21 12:03:38 [launcher.py:98] /home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/venv-vllm-0102/bin/python -m vllm.entrypoints.openai.api_server --host 127.0.0.1 --port 36411 --model Qwen/Qwen2.5-0.5B-Instruct --revision 7ae557604adf67be50417f59c2c2f167def9a775 --tokenizer-revision 7ae557604adf67be50417f59c2c2f167def9a775 --dtype float16 --generation-config vllm --enforce-eager --max-model-len 512 --block-size 16 --max-num-batched-tokens 512 --max-num-seqs 1 --no-enable-prefix-caching --distributed-executor-backend uni --gpu-memory-utilization 0.65 --kv-transfer-config {"kv_connector": "ServerTimingConnector", "kv_connector_module_path": "failslow.connector", "kv_role": "kv_both", "kv_connector_extra_config": {"shared_storage_path": "/home/sagemaker-user/DAT-CS5903/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/kv-spool/dat-kv-q5qrnyhe/d1"}}
+[1;36m(APIServer pid=3679)[0;0m INFO 11-21 12:03:38 [launcher.py:101] Shutting down FastAPI HTTP server.
+[1;36m(APIServer pid=3679)[0;0m INFO:     Shutting down
+[1;36m(APIServer pid=3679)[0;0m INFO:     Waiting for application shutdown.
+[1;36m(APIServer pid=3679)[0;0m INFO:     Application shutdown complete.

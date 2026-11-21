@@ -1,0 +1,18 @@
+{
+  "run_id": "test-0-transfer-0-control",
+  "config_id": "9de6741bc819124553d0",
+  "duration_s": 90.0,
+  "n_completed_requests": 229,
+  "n_right_censored_requests": 0,
+  "offered": 229,
+  "accepted": 229,
+  "verified_loads": 229,
+  "applied_stage_operations": 0,
+  "trace_bytes": 1152514,
+  "collector_cpu_s": 2.0749350000000106,
+  "coordinator_peak_rss_kib": 938440,
+  "synthetic_only": false,
+  "backend": "vllm-http",
+  "observer_cpu_s": 1.3596329999999999,
+  "observer_peak_rss_kib": 938440
+}

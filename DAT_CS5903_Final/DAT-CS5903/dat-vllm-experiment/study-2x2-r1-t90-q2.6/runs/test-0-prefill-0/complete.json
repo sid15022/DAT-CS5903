@@ -1,0 +1,18 @@
+{
+  "run_id": "test-0-prefill-0",
+  "config_id": "9de6741bc819124553d0",
+  "duration_s": 90.0,
+  "n_completed_requests": 250,
+  "n_right_censored_requests": 0,
+  "offered": 250,
+  "accepted": 250,
+  "verified_loads": 250,
+  "applied_stage_operations": 62,
+  "trace_bytes": 1190636,
+  "collector_cpu_s": 2.17521,
+  "coordinator_peak_rss_kib": 938440,
+  "synthetic_only": false,
+  "backend": "vllm-http",
+  "observer_cpu_s": 1.363456,
+  "observer_peak_rss_kib": 938440
+}
