@@ -8,6 +8,22 @@ In a four-GPU vLLM experiment, the detector ranked the affected component first 
 
 [Project report](docs/Project_Report.pdf) · [Final presentation](docs/Final_Project_Presentation.pptx) · [Experimental evaluation and results](docs/Experimental_Evaluation_and_Results.md) · [Mathematical methods and worked GPU example](docs/Mathematical_Methods.md) · [Architecture decisions](docs/Architecture_Decision_Records.md) · [Evidence and reproduction](docs/Evidence.md) · [Installation and runbook](DAT_CS5903_Final/DAT-CS5903/README.md)
 
+## Repository guide
+
+| Looking for | Start here |
+|---|---|
+| Documentation | [Submission documents](docs/) include the [project report](docs/Project_Report.pdf) and [architecture decisions](docs/Architecture_Decision_Records.md). The [pipeline walkthrough](DAT_CS5903_Final/DAT-CS5903/docs/PIPELINE.md) traces one request through diagnosis. |
+| Evaluation | [GPU evidence checks](evaluation/) verify the archived pilot and study. The [CPU acceptance script](DAT_CS5903_Final/DAT-CS5903/evaluation/acceptance.py) checks frozen CPU and simulator results. |
+| Tests | [Test suite](DAT_CS5903_Final/DAT-CS5903/tests/) covers the diagnosis pipeline, KV handoff and HTTP streaming. See [Quick demonstration](#quick-demonstration) for the test command and working directory. |
+| Source | [Python package](DAT_CS5903_Final/DAT-CS5903/failslow/) contains the collector, workers and detector. Start at the [CLI entry point](DAT_CS5903_Final/DAT-CS5903/failslow/__main__.py) to follow a pilot, study or replay. |
+| Operational handover | [Evaluator and operator guide](DAT_CS5903_Final/DAT-CS5903/docs/HANDOVER.md) covers service lifecycle, recovery, logs, access and costs. |
+
+### Operating a live run
+
+- **Start, stop or reset.** From `DAT_CS5903_Final/DAT-CS5903`, start the Docker pilot with `bash run_gpu.sh pilot`. To interrupt it, identify the experiment container with `docker ps` and run `docker stop <container-id>`. Use a fresh output directory for a clean run. Preserve completed results and confirm the workers have exited before clearing an abandoned KV spool. The handover also covers stopping Studio spaces and managed training jobs. [Start, stop and reset](DAT_CS5903_Final/DAT-CS5903/docs/HANDOVER.md#start-stop-and-reset)
+- **Locate logs and troubleshoot.** Open `server-logs/p1.log` and `server-logs/d1.log` inside the pilot or suite output directory. For startup failures, check visible GPUs and free memory. For a KV mismatch, inspect the failing route’s worker logs, spool mount and loaded-token receipt. For an empty ranking, check observation counts in `component_scores.csv.gz`. [Failure diagnosis](DAT_CS5903_Final/DAT-CS5903/docs/HANDOVER.md#failure-diagnosis-and-access)
+- **Accounts, quotas and costs.** The archived checks run locally without an AWS account or GPU. A fresh GPU run needs compatible hardware and access to packages and public model weights, or populated caches. Studio requires an AWS account, space permissions, GPU quota and regional capacity. Managed jobs also require an execution role, ECR image access and S3 output permissions. The four-GPU notebook schedules 60 minutes of traffic plus setup and evaluation. Budget for compute and storage, export results and stop the space. If GPU access is unavailable, use the [archived study demo](#review-the-executed-gpu-study). [Access requirements and budget](DAT_CS5903_Final/DAT-CS5903/docs/HANDOVER.md#failure-diagnosis-and-access)
+
 ## Review the executed GPU study
 
 Open [SageMaker_vLLM.ipynb](DAT_CS5903_Final/DAT-CS5903/SageMaker_vLLM.ipynb) to inspect the saved SageMaker run without starting a GPU. Section 3 verifies KV-cache reuse on all four routes. Section 4 shows the 40 completed trials and compares the four diagnosis methods. Section 5 shows example generations, first-ranked components, detection delays and matched controls.
