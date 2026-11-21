@@ -81,8 +81,9 @@ def execute(a, cfg, p):
             p.error("replay needs --trace and --baseline")
         replay(a.trace, a.baseline, a.out)
         return
-    if a.command == "suite" and a.duration < cfg.window_s + 9 * cfg.cadence_s:
-        p.error("Suite duration must provide at least ten evaluation windows")
+    minimum_ticks = 7 if a.backend == "vllm-http" and not a.quick else 10
+    if a.command == "suite" and a.duration < cfg.window_s + (minimum_ticks - 1) * cfg.cadence_s:
+        p.error(f"Suite duration must provide at least {minimum_ticks} evaluation windows")
     if a.backend == "sim":
         if a.command != "suite" or a.workers != 2:
             p.error(
