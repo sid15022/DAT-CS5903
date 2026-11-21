@@ -1,10 +1,10 @@
 # Architecture decision records
 
-Passive Fail Slow Diagnosis in Disaggregated LLM Inference · CS5903 · Siddharth V H, CS24MTECH15022. This log was documented on **21 November 2026**. Records are retrospective where the original decision timestamp is unavailable. The October progress report and the corresponding [prototype](../Fail_Slow_LLM_Inference_Prototype.ipynb) are the historical evidence. Implementation links point into this repository revision.
+CS5903 · Project 25 · Group 5 · 21 November 2026. The October [progress report](Progress_Report_2026-10-09.docx) and [prototype](../Fail_Slow_LLM_Inference_Prototype.ipynb) document the original method.
 
 ## ADR-001 · Retain healthy-conditioned service duration as the diagnosis method
 
-**Date, status and scope.** Recorded 21 November. Accepted in the implementation. The progress report dated 9 October describes this method and reports results from it. The final implementation reaffirms that direction. A timestamped declaration by 9 October at 11:59 PM IST and formal mentor sign-off were not supplied. No earlier ADR is superseded.
+**Date, status and scope.** Accepted. Recorded retrospectively on 21 November 2026. The 9 October progress report documents the same method. The record contains no independently dated approval by the 11:59 PM IST deadline.
 
 **Context and drivers.** A healthy long prompt and a slowed GPU can both inflate TTFT. Fault labels are scarce, and the observer must operate on signals available at decision time.
 
@@ -38,7 +38,7 @@ Passive Fail Slow Diagnosis in Disaggregated LLM Inference · CS5903 · Siddhart
 
 **Date, status and scope.** Recorded 21 November. Accepted for the single-host GPU testbed. The simulator remains a separate execution mode.
 
-**Context and drivers.** Reproducible ground truth is easy to generate in simulation. The project also needs proof that actual model computation can move between workers while preserving outputs.
+**Context and drivers.** Simulation provides controlled faults. A hardware test must also verify that transferring the KV cache between workers preserves generated tokens.
 
 **Options.** Simulation only maximizes control. An embedded engine simplifies process management. Native per-GPU vLLM services exercise the HTTP stream, distinct processes and a connector. A multi-host RDMA testbed would add network realism and placement and instrumentation requirements.
 
@@ -82,6 +82,6 @@ Passive Fail Slow Diagnosis in Disaggregated LLM Inference · CS5903 · Siddhart
 
 **Revisit trigger.** Too few eligible windows to calibrate or report a metric, or a wide exposure-based confidence interval spanning the proposed target. Collect additional independent runs before making a production claim.
 
-## Validation update following GPU archive publication
+## GPU validation
 
-On four NVIDIA A10Gs, the conditioned detector ranked the correct component first in 8 of 12 held-out GPU incidents. It abstained on the two sparse-worker and two hidden-transfer incidents. The median time to a correct top ranking was 12.5 s among detected incidents. Three false episodes in 16 monitored healthy minutes exceeded the provisional one-per-hour target. ADR-001 and ADR-005 retain their operating-point and support caveats. Paired controls yielded 2,821 matching generations. Live and offline logs agree on 784 rankings and explanations. [GPU evidence](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/summary.csv).
+The conditioned and matched-peer methods each localized 8 of 12 incidents. Median time to a correct ranking was 12.5 s and 32.5 s, respectively. The conditioned detector raised three false episodes in 16 healthy minutes, exceeding the target in ADR-001. [GPU evidence](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/summary.csv).

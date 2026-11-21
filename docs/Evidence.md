@@ -1,6 +1,6 @@
 # Evidence, acceptance and handover
 
-The [archived GPU run](https://github.com/sid15022/DAT-CS5903/commit/e20f53712de648b8c03784d2b1c8496146fc2d16) contains the held-out results, per-request traces and all 40 completion records. The previously saved standalone pilot is a separate invocation from the pilot inside the suite.
+The [archived GPU run](https://github.com/sid15022/DAT-CS5903/commit/e20f53712de648b8c03784d2b1c8496146fc2d16) contains the held-out results, per-request traces and all 40 completion records. The standalone pilot and the study pilot are separate runs.
 
 | Expected or planned test | Observed outcome | Artifact |
 |---|---|---|
@@ -21,24 +21,31 @@ Run `python evaluation/check_gpu_study.py` from the repository root. It checks t
 
 ## Measured four-GPU SageMaker study
 
-On four NVIDIA A10Gs, the conditioned detector ranked the correct component first in 8 of 12 held-out GPU incidents. It abstained on the two sparse-worker and two hidden-transfer incidents. The median time to a correct top ranking was 12.5 s among detected incidents. Three false episodes in 16 monitored healthy minutes exceeded the provisional one-per-hour target. The one-hour schedule includes calibration and injected trials. The false-alarm denominator counts only the 16 no-fault evaluation trials after their 30-second warm-ups.
-
-| Method | Correct first / 12 | Abstentions | Wrong first | Median first correct¹ | False episodes / 16 min |
-|---|---:|---:|---:|---:|---:|
-| Conditioned | 8 | 4 | 0 | 12.5 s | 3 |
-| Historical | 8 | 4 | 0 | 12.5 s | 4 |
-| Work rate | 7 | 3 | 2 | 17.5 s | 2 |
-| Matched peer | 8 | 4 | 0 | 32.5 s | 0 |
-
-¹ Median among the eight incidents per method that eventually received a correct top ranking. The conditioned method identified both severities of prefill, decode and mixed faults after 12.5 s, and both visible transfer faults after 22.5 s. It matched historical latency on first-choice accuracy and median delay. With one repeat per case and severity the experiment establishes no general performance ordering.
-
-All 40 trial IDs have matching completion records. There were 10,209 offered, 10,208 accepted and 10,198 completed requests, with 10 right-censored after acceptance. Paired runs matched on all 2,821 common completed prompts and output token sequences. All 784 held-out live rankings and explanations match the recorded offline results. Only three stable SLO-alarming windows were eligible; one explanation was correct. GPU monitoring overhead requires a separate paired on/off study.
+The 40-trial study on four NVIDIA A10G GPUs included 12 injected incidents. The 16 held-out no-fault trials each contributed 60 monitored seconds after warm-up. Fault and control runs matched on 2,821 completed generations. All 784 live rankings and explanations agreed with offline replay. [Method comparison](../DAT_CS5903_Final/DAT-CS5903/RESULTS.md#measured-four-gpu-sagemaker-study)
 
 [Run manifest](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/study.json) · [Per-incident results](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/incidents.csv) · [Healthy exposure](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/healthy_runs.csv) · [Method summary](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/summary.csv) · [Paired service impact](https://github.com/sid15022/DAT-CS5903/blob/e20f53712de648b8c03784d2b1c8496146fc2d16/DAT_CS5903_Final/DAT-CS5903/dat-vllm-experiment/study-2x2-r1-t90-q2.6/paired_impact.csv)
 
 
 ## Progress, feedback and viva
 
-* The [9 October progress report](Progress_Report_2026-10-09.docx) by Siddharth V H records the conditioned-duration method, baseline comparisons, sparse/missing evidence cases, 8/12 initial first-choice hits and a future SageMaker testbed. The [original notebook](../Fail_Slow_LLM_Inference_Prototype.ipynb) provides reproducible prototype evidence.
-* 16 October: original notebook repository milestone. 21 November: reproducible simulator and CPU evidence, native GPU pilot and [operator-uploaded notebook](https://github.com/sid15022/DAT-CS5903/commit/60b014c451cdcbe01be30ca16df4eb5e2312e083). The [subsequent archive commit](https://github.com/sid15022/DAT-CS5903/commit/e20f53712de648b8c03784d2b1c8496146fc2d16) supplies all 40 GPU trials. Exact week-by-week logs, formal approval and scored mentor feedback were unavailable. No scored feedback item can be marked resolved on this evidence.
-* Viva demonstration: trace one p1→d2 request from client TTFT to worker service spans. Explain why its first inter-token gap also includes transfer. Replay a held-out incident, identify the first accusation and inspect its preceding window. Explain why matched-peer needs another same-stage worker and why sparse traffic can imply unknown. Explain why 8/12 first-choice hits and three false alarms can coexist; compare matched-peer at the same exposure.
+| Date | Milestone | Record |
+|---|---|---|
+| 9 October 2026 | The simulator localized 8 of 12 incidents. The progress report proposed a SageMaker test of the same method. | [Progress report](Progress_Report_2026-10-09.docx) |
+| 16 October 2026 | The prototype implementation was archived. | [Prototype notebook](../Fail_Slow_LLM_Inference_Prototype.ipynb) |
+| 21 November 2026 | The native vLLM pilot verified KV reuse on four routes. The subsequent study recorded 40 GPU trials. | [Executed notebook](https://github.com/sid15022/DAT-CS5903/commit/60b014c451cdcbe01be30ca16df4eb5e2312e083) · [Study archive](https://github.com/sid15022/DAT-CS5903/commit/e20f53712de648b8c03784d2b1c8496146fc2d16) |
+
+Weekly logs and scored mentor feedback are unavailable. ADR-001 records the methodology decision retrospectively. [Architecture decisions](Architecture_Decision_Records.md)
+
+For the demonstration, compare trial `test-0-decode-1` with its matched control. The first two threshold crossings occurred at 40 s and 50 s. The second triggered the first diagnosis, 12.5 s after the intervention began. The corresponding trace appears on page 7 of the [report](Project_Report.pdf).
+
+## Release tag
+
+The [bundle](Submission_Tag.bundle) contains the annotated tag for the frozen implementation. From an authenticated clone, the following commands restore, publish and verify the tag. Its commit is `dd51969ee5c8b6d78a137d29129f61f6a0790b07`.
+
+```sh
+git pull --ff-only origin main
+git fetch ./docs/Submission_Tag.bundle refs/tags/cs5903-final-2026-gpu:refs/tags/cs5903-final-2026-gpu
+git rev-parse 'cs5903-final-2026-gpu^{commit}'
+git push origin refs/tags/cs5903-final-2026-gpu
+git ls-remote origin 'refs/tags/cs5903-final-2026-gpu*'
+```

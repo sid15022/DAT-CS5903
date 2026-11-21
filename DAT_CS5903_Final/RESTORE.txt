@@ -1,2 +1,2 @@
-The DAT-CS5903 directory contains the ready-to-read submission. To restore Git history and the final annotated tag, run:
+The DAT-CS5903 directory contains the project source. Restore the historical implementation and its annotated tag with
 git clone -b cs5903-final-2026 DAT_CS5903_Final.bundle DAT-evaluator

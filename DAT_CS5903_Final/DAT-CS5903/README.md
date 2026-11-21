@@ -1,6 +1,6 @@
 # Passive Fail-Slow Diagnosis in Disaggregated LLM Inference
 
-**Submission guide.** Start with the [step-by-step pipeline](docs/PIPELINE.md), [final report](docs/REPORT.md), [architecture decisions](docs/DECISIONS.md), [operator and evaluator handover](docs/HANDOVER.md), and [open work](docs/OPEN_WORK.md). The four-GPU SageMaker study completed all 40 trials. [GPU comparison and measured outcomes](RESULTS.md#measured-four-gpu-sagemaker-study).
+**Submission guide.** Start with the [step-by-step pipeline](docs/PIPELINE.md), [final report](../../docs/Project_Report.pdf), [architecture decisions](docs/DECISIONS.md), [operator and evaluator handover](docs/HANDOVER.md), and [open work](docs/OPEN_WORK.md). The four-GPU SageMaker study completed all 40 trials. [GPU comparison and measured outcomes](RESULTS.md#measured-four-gpu-sagemaker-study).
 
 **Five-minute demo.** From the project root run `python evaluation/acceptance.py`, then open Study_Results.ipynb. The frozen evaluator uses only the Python standard library. For a hardware demonstration open SageMaker_vLLM.ipynb and set PILOT_ONLY to True. The 129-token pilot prompt should yield the same eight generated token IDs on the split and unsplit paths and a receipt for 128 loaded tokens. Generated text and exact timings are recorded by the run.
 
@@ -10,7 +10,7 @@ A request visits a prefill worker, transfers its KV cache, and streams tokens fr
 
 **Start on SageMaker** by opening **SageMaker_vLLM.ipynb** in a GPU JupyterLab space. The standalone notebook includes the project source, installs an isolated vLLM runtime, launches native OpenAI-compatible servers, runs the disaggregated pilot and evaluates a held-out experiment. No Docker build or ECR repository is needed for this Studio workflow. The managed-job workflow is documented below.
 
-Open **Study_Results.ipynb** to explore the included experiments, or read **RESULTS.md** for the numerical findings. The original DAT prototype notebook is also included. The GPU suite writes the same result tables and can be opened in the same results notebook.
+Open **Study_Results.ipynb** to explore the included experiments, or read **RESULTS.md** for the numerical findings. The GPU suite writes the same result tables and can be opened in the same results notebook.
 
 ## Run on NVIDIA GPUs
 
@@ -33,7 +33,7 @@ WORKERS=1 bash run_gpu.sh suite --with-overhead
 
 The 1×1 setup covers one worker at each stage and one logical path. A matched-peer comparison is unavailable and the sparse-second-worker case is omitted. With four GPUs the default study has 96 runs of 180 seconds each, or 4.8 hours of collection. Three optional overhead pairs add 18 minutes. Allow additional time for image/model download, engine startup, drain, fitting and reporting. A 2×2 run with one repetition uses 40 runs. Rerunning the same suite in the same output directory reuses completed trials. Use a different `--out /results/name` for changes to the experiment.
 
-`CUDA_VISIBLE_DEVICES=2,3` selects a pair on a larger host. `DAT_RESULTS`, `DAT_KV_SPOOL` and `DAT_MODEL_CACHE` control host paths. If you change the image source after its first build, run `docker build -f Dockerfile.gpu -t dat-failslow:http-v0.10.2 .` again. The helper reuses the local image when present.
+`CUDA_VISIBLE_DEVICES=2,3` selects a pair on a larger host. `DAT_RESULTS`, `DAT_KV_SPOOL` and `DAT_MODEL_CACHE` control host paths. After changing the image source, run `docker build -f Dockerfile.gpu -t dat-failslow:http-v0.10.2 .` again. The helper reuses the local image when present.
 
 If SageMaker Studio already provides the pinned vLLM runtime and exposes the required GPUs, run the CLI directly from the extracted root. Install pandas, scikit-learn and joblib in that runtime first.
 
@@ -99,7 +99,7 @@ python -m failslow replay --baseline results/synthetic/baseline.joblib \
   --trace results/synthetic/runs/test-0-decode-1 --out local-runs/replay
 ```
 
-Use JupyterLab to open **Study_Results.ipynb** in the project root. Set its first cell's `study_dir` to `Path("gpu-runs/suite-2x2")` to analyze your run. The GPU container fits its own baseline with its installed scikit-learn version. Use that same image when replaying its serialized model.
+Use JupyterLab to open **Study_Results.ipynb** in the project root. Set its first cell's `study_dir` to `Path("gpu-runs/suite-2x2")` to analyze that run. The GPU container fits its own baseline with its installed scikit-learn version. Use that same image when replaying its serialized model.
 
 ## Diagnosis and evaluation
 
@@ -129,7 +129,7 @@ The overhead comparison enables stage journaling, board telemetry and live analy
 
 ## Run as a finite SageMaker job
 
-Build **Dockerfile.gpu**, push the image to your ECR repository and supply a SageMaker execution role and S3 output prefix. Run the following from a machine with AWS CLI and your configured region. The Python helper renders the job request. The AWS command submits it and starts billable compute.
+Build **Dockerfile.gpu**, push the image to the ECR repository and supply a SageMaker execution role and S3 output prefix. Run the following from a machine with AWS CLI configured for the deployment region. The Python helper renders the job request. The AWS command submits it and starts billable compute.
 
 ```bash
 python sagemaker_job.py --image "$ECR_IMAGE" --role "$SAGEMAKER_ROLE" \
