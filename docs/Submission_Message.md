@@ -8,7 +8,7 @@
 | Group number | [enter official group number] |
 | Student | Siddharth V H (CS24MTECH15022) |
 | Repository | https://github.com/sid15022/DAT-CS5903 |
-| Stable submission | `cs5903-final-2026-gpu` · use `git rev-parse HEAD` in this frozen checkout for its full commit ID |
+| Stable submission | `cs5903-final-2026-gpu` · [dd51969ee5c8b6d78a137d29129f61f6a0790b07](https://github.com/sid15022/DAT-CS5903/tree/dd51969ee5c8b6d78a137d29129f61f6a0790b07) |
 | Evaluated GPU run | [e20f53712de648b8c03784d2b1c8496146fc2d16](https://github.com/sid15022/DAT-CS5903/commit/e20f53712de648b8c03784d2b1c8496146fc2d16) |
 | Demo | [Executed SageMaker notebook](../DAT_CS5903_Final/DAT-CS5903/SageMaker_vLLM.ipynb) and [offline verification output](../evaluation/gpu_study_verification.txt) |
 
@@ -19,3 +19,15 @@ The study ran Qwen2.5-0.5B-Instruct on vLLM across four NVIDIA A10G GPUs for 40 
 ## Before sending
 
 Fill in the two course allocation fields and confirm the member list. An evaluator can verify the archived four-GPU study from the repository root with `python evaluation/check_gpu_study.py`.
+
+The stable checkout above is available on GitHub. The annotated tag is included in [Submission_Tag.bundle](Submission_Tag.bundle). To publish the tag from an authenticated repository clone, run the following from its root.
+
+```sh
+git pull --ff-only origin main
+git fetch ./docs/Submission_Tag.bundle refs/tags/cs5903-final-2026-gpu:refs/tags/cs5903-final-2026-gpu
+git rev-parse 'cs5903-final-2026-gpu^{commit}'
+git push origin refs/tags/cs5903-final-2026-gpu
+git ls-remote origin 'refs/tags/cs5903-final-2026-gpu*'
+```
+
+The peeled tag must match the stable submission SHA above.
